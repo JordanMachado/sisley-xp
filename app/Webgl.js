@@ -26,8 +26,8 @@ export default class Webgl {
     this.cube.position.set(0, 0, 0);
     this.scene.add(this.cube);
 
-    this.controls = new DeviceOrientationControls( this.camera );
-    //this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+    //this.controls = new DeviceOrientationControls( this.camera );
+    this.controls = new OrbitControls(this.camera, this.renderer.domElement);
 
   }
 
@@ -54,7 +54,7 @@ export default class Webgl {
     } else {
       this.renderer.render(this.scene, this.camera);
     }
-    this.controls.update();
+    //this.controls.update();
     this.cube.update();
   }
 }
