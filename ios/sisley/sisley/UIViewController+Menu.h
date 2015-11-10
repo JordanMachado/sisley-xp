@@ -10,7 +10,5 @@
 
 @interface UIViewController (Menu)
 
--(void)showMenu;
--(void)hideMenu;
 
 @end

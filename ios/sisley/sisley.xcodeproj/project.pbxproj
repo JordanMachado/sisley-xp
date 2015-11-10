@@ -17,6 +17,8 @@
 		49167ED41BEA57540024E615 /* sisleyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49167ED31BEA57540024E615 /* sisleyUITests.m */; };
 		49167EE31BEA5B490024E615 /* ExperienceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49167EE21BEA5B490024E615 /* ExperienceViewController.m */; settings = {ASSET_TAGS = (); }; };
 		49167EED1BEA646E0024E615 /* UIViewController+Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 49167EEC1BEA646E0024E615 /* UIViewController+Menu.m */; settings = {ASSET_TAGS = (); }; };
+		49ADE5E91BF0A7A600190312 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 49ADE5E81BF0A7A600190312 /* menu.png */; settings = {ASSET_TAGS = (); }; };
+		49ADE5EB1BF0A8DD00190312 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49ADE5EA1BF0A8DD00190312 /* Menu.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		49167EE21BEA5B490024E615 /* ExperienceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExperienceViewController.m; sourceTree = "<group>"; };
 		49167EEB1BEA646E0024E615 /* UIViewController+Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Menu.h"; sourceTree = "<group>"; };
 		49167EEC1BEA646E0024E615 /* UIViewController+Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Menu.m"; sourceTree = "<group>"; };
+		49ADE5E81BF0A7A600190312 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = assets/menu.png; sourceTree = SOURCE_ROOT; };
+		49ADE5EA1BF0A8DD00190312 /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +114,9 @@
 				49167EB11BEA57540024E615 /* AppDelegate.h */,
 				49167EB21BEA57540024E615 /* AppDelegate.m */,
 				49167EE61BEA5B6D0024E615 /* viewControllers */,
+				49ADE5E71BF0A73D00190312 /* assets */,
 				49167EB71BEA57540024E615 /* Main.storyboard */,
+				49ADE5EA1BF0A8DD00190312 /* Menu.storyboard */,
 				49167EBA1BEA57540024E615 /* Assets.xcassets */,
 				49167EBC1BEA57540024E615 /* LaunchScreen.storyboard */,
 				49167EBF1BEA57540024E615 /* Info.plist */,
@@ -169,6 +175,7 @@
 				49167EE51BEA5B580024E615 /* app */,
 				49167EE41BEA5B500024E615 /* experience */,
 				49167EEA1BEA63F70024E615 /* UIViewController+menu */,
+				49ADE5EF1BF0AE5300190312 /* menu */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -180,6 +187,21 @@
 				49167EEC1BEA646E0024E615 /* UIViewController+Menu.m */,
 			);
 			name = "UIViewController+menu";
+			sourceTree = "<group>";
+		};
+		49ADE5E71BF0A73D00190312 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				49ADE5E81BF0A7A600190312 /* menu.png */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
+		49ADE5EF1BF0AE5300190312 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +307,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49ADE5EB1BF0A8DD00190312 /* Menu.storyboard in Resources */,
+				49ADE5E91BF0A7A600190312 /* menu.png in Resources */,
 				49167EBE1BEA57540024E615 /* LaunchScreen.storyboard in Resources */,
 				49167EBB1BEA57540024E615 /* Assets.xcassets in Resources */,
 				49167EB91BEA57540024E615 /* Main.storyboard in Resources */,
@@ -540,6 +564,7 @@
 				49167EDA1BEA57540024E615 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49167EDB1BEA57540024E615 /* Build configuration list for PBXNativeTarget "sisleyTests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +573,7 @@
 				49167EDD1BEA57540024E615 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49167EDE1BEA57540024E615 /* Build configuration list for PBXNativeTarget "sisleyUITests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +582,7 @@
 				49167EE01BEA57540024E615 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

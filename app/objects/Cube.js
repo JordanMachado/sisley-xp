@@ -1,4 +1,4 @@
-import THREE from 'three';
+
 
 export default class Cube extends THREE.Object3D {
   constructor() {
@@ -29,7 +29,7 @@ export default class Cube extends THREE.Object3D {
 
   	// build the skybox Mesh
   	this.skyboxMesh	= new THREE.Mesh(
-      new THREE.CubeGeometry( 10, 10, 10,  1, 1, 1, null, true ),
+      new THREE.CubeGeometry( 10, 100, 10,  1, 1, 1, null, true ),
       material );
   	// add it to the scene
   	this.add( this.skyboxMesh );

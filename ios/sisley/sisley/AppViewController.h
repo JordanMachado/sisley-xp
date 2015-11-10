@@ -10,6 +10,6 @@
 
 @interface AppViewController : UIViewController
 
-
+@property(nonatomic) BOOL menuIsOpen;
 @end
 
