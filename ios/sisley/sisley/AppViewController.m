@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.menuIsOpen = false;
     // Do any additional setup after loading the view, typically from a nib.
 }
 - (IBAction)onTouchUpInsideXpBtn:(id)sender {

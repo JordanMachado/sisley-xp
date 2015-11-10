@@ -9,10 +9,14 @@ let gui;
 // webgl settings
 webgl = new Webgl(window.innerWidth, window.innerHeight);
 document.body.appendChild(webgl.renderer.domElement);
+document.body.appendChild(webgl.rendererCss.domElement);
 
 // GUI settings
 gui = new dat.GUI();
 gui.add(webgl.params, 'usePostprocessing');
+
+
+
 
 // handle resize
 window.addEventListener('resize', resizeHandler);
