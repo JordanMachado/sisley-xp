@@ -1,4 +1,6 @@
-import THREE from 'three';
+var THREE = require('three')
+var OrbitControls = require('three-orbit-controls')(THREE)
+var DeviceOrientationControls = require('three.orientation')
 window.THREE = THREE;
 import Cube from './objects/Cube';
 
@@ -23,6 +25,10 @@ export default class Webgl {
     this.cube = new Cube();
     this.cube.position.set(0, 0, 0);
     this.scene.add(this.cube);
+
+    this.controls = new DeviceOrientationControls( this.camera );
+    //this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+
   }
 
   initPostprocessing() {
@@ -48,7 +54,7 @@ export default class Webgl {
     } else {
       this.renderer.render(this.scene, this.camera);
     }
-
+    this.controls.update();
     this.cube.update();
   }
 }
