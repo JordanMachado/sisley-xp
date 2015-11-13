@@ -51,16 +51,17 @@ export default class Webgl {
     this.composer = null;
     this.initPostprocessing();
 
-    // this.cube = new Cube();
-    // this.cube.position.set(0, 0, 100);
-    // this.scene.add(this.cube);
+    this.cube = new Cube();
+    this.cube.position.set(0, 0, 100);
+    this.scene.add(this.cube);
     // this.hotspots.push(this.cube)
 
-    this.sphere = new Sphere();
-    this.sphere.position.set(0, 0, 0);
-    this.scene.add(this.sphere);
+    //this.sphere = new Sphere();
+    //this.sphere.position.set(0, 0, 0);
+    //this.scene.add(this.sphere);
 
     window.webgl = this;
+
 
 
 
@@ -81,6 +82,7 @@ export default class Webgl {
 
     let hotspot = new Hotspot()
     hotspot.add(this.sceneCss);
+
 
     if(isTouch)
       this.controls = new DeviceOrientationControls( this.camera );
@@ -142,8 +144,7 @@ export default class Webgl {
 
 
     }
-
+    this.cube.update();
     this.controls.update();
-    // this.cube.update();
   }
 }
