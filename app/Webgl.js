@@ -3,6 +3,10 @@ var OrbitControls = require('three-orbit-controls')(THREE)
 var DeviceOrientationControls = require('three.orientation')
 import Cube from './objects/Cube';
 import Sphere from './objects/Sphere';
+import Hotspot from './objects/Hotspot';
+import Datas from './datas/datas.json'
+import PlanView from './views/PlantView';
+
 let isTouch = ("ontouchstart" in document.documentElement) ? true : false;
 
 let hotspot = document.querySelector('#hotspot');
@@ -17,17 +21,31 @@ export default class Webgl {
     this.sceneCss = new THREE.Scene();
 
     this.camera = new THREE.PerspectiveCamera(45, width / height, 0.001, 1000);
-    this.camera.position.z = 100;
+    this.camera.position.z = 500;
 
     this.renderer = new THREE.WebGLRenderer();
     this.renderer.setSize(width, height);
     this.renderer.setClearColor(0x262626);
 
     this.rendererCss = new THREE.CSS3DRenderer();
-		this.rendererCss.setSize( window.innerWidth, window.innerHeight );
+		this.rendererCss.setSize( width, height );
 		this.rendererCss.domElement.style.position = 'absolute';
 		this.rendererCss.domElement.style.pointerEvents = 'none';
 		this.rendererCss.domElement.style.top = 0;
+
+
+
+
+    // let plantView = new PlanView({
+    //   el:'.plantView',
+    //   datas:Datas.hotspots[0].product
+    // });
+    // plantView.render();
+    // plantView.update(Datas.hotspots[1].product);
+    // plantView.render();
+
+
+
 
 
     this.composer = null;
@@ -46,22 +64,23 @@ export default class Webgl {
 
 
 
-		var element = document.createElement( 'div' );
-		element.id = 'hotspot';
-		element.style.opacity = 0.5;
-    element.style.width = "20px";
-    element.style.height = "20px"
+		// var element = document.createElement( 'div' );
+		// element.id = 'hotspot';
+		// element.style.opacity = 0.5;
+    // element.style.width = "20px";
+    // element.style.height = "20px"
+    //
+		// this.objectCss = new THREE.CSS3DObject( element );
+		// this.objectCss.position.x = 10;
+		// this.objectCss.position.y = 10;
+		// this.objectCss.position.z = 100;
+    //
+		// this.objectCss.scale.x = Math.random() + 0.5;
+		// this.objectCss.scale.y = Math.random() + 0.5;
+		// this.sceneCss.add( this.objectCss );
 
-		this.objectCss = new THREE.CSS3DObject( element );
-		this.objectCss.position.x = 10;
-		this.objectCss.position.y = 10;
-		this.objectCss.position.z = 100;
-
-		this.objectCss.scale.x = Math.random() + 0.5;
-		this.objectCss.scale.y = Math.random() + 0.5;
-		this.sceneCss.add( this.objectCss );
-
-
+    let hotspot = new Hotspot()
+    hotspot.add(this.sceneCss);
 
     if(isTouch)
       this.controls = new DeviceOrientationControls( this.camera );
@@ -83,7 +102,7 @@ export default class Webgl {
 
     this.camera.aspect = width / height;
     this.camera.updateProjectionMatrix();
-
+    this.rendererCss.setSize(width, height);
     this.renderer.setSize(width, height);
   }
   checkHotSpot() {
@@ -99,6 +118,15 @@ export default class Webgl {
     } else {
       hotspot.classList.remove('active');
     }
+
+  }
+  mousedown() {
+    // console.log('mousedown');
+    // this.rendererCss.domElement.style.pointerEvents = 'none';
+
+  }
+  mouseup() {
+    // this.rendererCss.domElement.style.pointerEvents = 'auto';
 
   }
   render() {

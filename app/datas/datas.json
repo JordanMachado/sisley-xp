@@ -1,0 +1,32 @@
+{
+  "hotspots":[
+    {
+      "id":"hotspot-flower",
+      "position":{
+        "x":100,
+        "y":100,
+        "z":100,
+      },
+      "product":{
+        "title":"Title1",
+        "subtitle":"Subtitle1",
+        "description":"lorem ipsum1",
+        "images":[]
+      }
+    },
+    {
+      "id":"hotspot-flower",
+      "position":{
+        "x":100,
+        "y":100,
+        "z":100,
+      },
+      "product":{
+        "title":"Titl2",
+        "subtitle":"Subtitle2",
+        "description":"lorem ipsum2",
+        "images":[]
+      }
+    }
+  ]
+}
