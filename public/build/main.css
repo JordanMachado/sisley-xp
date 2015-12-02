@@ -1,0 +1,30 @@
+body, html {
+     width: 100%;
+     height: 100%;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+ }
+ .hotspot {
+     background-color: red;
+     cursor:pointer;
+ }
+ .hotspot.active {
+   background-color: blue;
+
+ }
+ svg {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   pointer-events: all;
+ }
+ .plantView {
+   position: absolute;
+   background-color: white;
+   top:0;
+   left:100%;
+   width: 100%;
+   height: 100%;
+   z-index: 10;
+}

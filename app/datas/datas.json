@@ -1,7 +1,7 @@
 {
   "hotspots":[
     {
-      "id":"hotspot-flower",
+      "id":"hotspot-flower1",
       "position":{
         "x":100,
         "y":100,
@@ -15,11 +15,11 @@
       }
     },
     {
-      "id":"hotspot-flower",
+      "id":"hotspot-flower2",
       "position":{
         "x":100,
         "y":100,
-        "z":100,
+        "z":200,
       },
       "product":{
         "title":"Titl2",

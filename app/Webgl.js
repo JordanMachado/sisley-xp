@@ -16,7 +16,10 @@ export default class Webgl {
     this.params = {
       usePostprocessing: false,
     };
+    this.datas = Datas;
     this.hotspots = [];
+
+    // scene settings
     this.scene = new THREE.Scene();
     this.sceneCss = new THREE.Scene();
 
@@ -33,55 +36,20 @@ export default class Webgl {
 		this.rendererCss.domElement.style.pointerEvents = 'none';
 		this.rendererCss.domElement.style.top = 0;
 
-
-
-
-    // let plantView = new PlanView({
-    //   el:'.plantView',
-    //   datas:Datas.hotspots[0].product
-    // });
-    // plantView.render();
-    // plantView.update(Datas.hotspots[1].product);
-    // plantView.render();
-
-
-
+    this.buildHotspot();
 
 
     this.composer = null;
     this.initPostprocessing();
 
+
     this.cube = new Cube();
     this.cube.position.set(0, 0, 100);
     this.scene.add(this.cube);
-    // this.hotspots.push(this.cube)
-
-    //this.sphere = new Sphere();
-    //this.sphere.position.set(0, 0, 0);
-    //this.scene.add(this.sphere);
 
     window.webgl = this;
 
 
-
-
-		// var element = document.createElement( 'div' );
-		// element.id = 'hotspot';
-		// element.style.opacity = 0.5;
-    // element.style.width = "20px";
-    // element.style.height = "20px"
-    //
-		// this.objectCss = new THREE.CSS3DObject( element );
-		// this.objectCss.position.x = 10;
-		// this.objectCss.position.y = 10;
-		// this.objectCss.position.z = 100;
-    //
-		// this.objectCss.scale.x = Math.random() + 0.5;
-		// this.objectCss.scale.y = Math.random() + 0.5;
-		// this.sceneCss.add( this.objectCss );
-
-    let hotspot = new Hotspot()
-    hotspot.add(this.sceneCss);
 
 
     if(isTouch)
@@ -94,7 +62,15 @@ export default class Webgl {
   initPostprocessing() {
     if (!this.params.usePostprocessing) { return; }
 
-    /* Add the effect composer of your choice */
+  }
+  buildHotspot() {
+
+    for (var i = 0; i < this.datas.hotspots.length; i++) {
+        let hotspot = new Hotspot(this.datas.hotspots[i]);
+        hotspot.add(this.sceneCss);
+        this.hotspots.push(hotspot)
+    }
+
   }
 
   resize(width, height) {
@@ -106,21 +82,6 @@ export default class Webgl {
     this.camera.updateProjectionMatrix();
     this.rendererCss.setSize(width, height);
     this.renderer.setSize(width, height);
-  }
-  checkHotSpot() {
-    let hotspot = document.querySelector('#hotspot');
-    let boundingBox = hotspot.getBoundingClientRect();
-    let dist = Math.sqrt(Math.pow(window.innerWidth/2-boundingBox.left-50,2)+Math.pow(window.innerHeight/2-boundingBox.top-50,2));
-
-    if(dist<150) {
-      if(hotspot.classList.contains('active')) return;
-
-      hotspot.classList.add('active')
-
-    } else {
-      hotspot.classList.remove('active');
-    }
-
   }
   mousedown() {
     // console.log('mousedown');
@@ -138,8 +99,10 @@ export default class Webgl {
       this.renderer.render(this.scene, this.camera);
       this.rendererCss.render( this.sceneCss, this.camera );
 
+      for (var i = 0; i < this.hotspots.length; i++) {
+          this.hotspots[i].check();
+      }
 
-      this.checkHotSpot();
 
 
 

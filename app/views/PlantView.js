@@ -23,6 +23,13 @@ export default class PlantView {
   render() {
     let html = Mustache.to_html(this.template, this.datas);
     this.el.innerHTML = html;
+    this.rendered();
 
+  }
+  rendered() {
+    this.closeBtn = document.querySelector('.back');
+    this.closeBtn.onclick =()=> {
+      this.hide();
+    }
   }
 }
