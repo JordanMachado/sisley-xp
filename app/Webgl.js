@@ -20,7 +20,7 @@ export default class Webgl {
     this.scene = new THREE.Scene();
     this.sceneCss = new THREE.Scene();
 
-    this.camera = new THREE.PerspectiveCamera(45, width / height, 0.001, 1000);
+    this.camera = new THREE.PerspectiveCamera(45, width / height, 0.001, 10000);
     this.camera.position.z = 500;
 
     this.renderer = new THREE.WebGLRenderer();
