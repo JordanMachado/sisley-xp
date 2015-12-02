@@ -33,7 +33,7 @@ export default class Cube extends THREE.Object3D {
   	// build the skybox Mesh
   	this.skyboxMesh	= new THREE.Mesh(
       //new THREE.CubeGeometry( 100, 100, 100,  1, 1, 1, null, true ),
-      new THREE.CylinderGeometry( 500, 500, 500, 60 ),
+      new THREE.CylinderGeometry( 500, 500, 1000, 60 ),
       materialTest );
   	// add it to the scene
   	this.add( this.skyboxMesh );
