@@ -14,10 +14,12 @@ export default class Hotspot {
     element.style.height = "20px";
 
 		this.objectCss = new THREE.CSS3DObject( element );
-		this.objectCss.position.x = datas.position.x;
+		this.objectCss.position.x = 160 *Math.cos(datas.position.angle);
 		this.objectCss.position.y = datas.position.y;
-		this.objectCss.position.z = datas.position.z;
+		this.objectCss.position.z = 160 *Math.sin(datas.position.angle);
     this.objectCss.element.parent = this.objectCss;
+
+
 
     this.objectCss.element.onclick = function() {
       let plantView = new PlanView({
@@ -36,7 +38,8 @@ export default class Hotspot {
   }
   check() {
     let boundingBox = this.objectCss.element.getBoundingClientRect()
-    let dist = Math.sqrt(Math.pow(window.innerWidth/2-boundingBox.left-50,2)+Math.pow(window.innerHeight/2-boundingBox.top-50,2));
+    // check center x
+    let dist = Math.sqrt(Math.pow(window.innerWidth/2-boundingBox.left-50,2));
 
     if(dist<150) {
       if(this.objectCss.element.classList.contains('active')) return;

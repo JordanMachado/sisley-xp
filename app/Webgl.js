@@ -16,6 +16,10 @@ export default class Webgl {
     this.params = {
       usePostprocessing: false,
     };
+    this.hotspotsPosition = {
+      angle:0,
+      y:0
+    };
     this.datas = Datas;
     this.hotspots = [];
 
@@ -23,16 +27,12 @@ export default class Webgl {
     this.scene = new THREE.Scene();
     this.sceneCss = new THREE.Scene();
 
-    this.camera = new THREE.PerspectiveCamera(45, width / height, 0.001, 10000);
+    this.camera = new THREE.PerspectiveCamera(45, width / height, 0.001, 1000);
 
 
-    this.camera.position.set(0,0,10);
-    // this.camera.position.set(0,0,500);
+    this.camera.position.set(0,0,1);
 
-    this.renderer = new THREE.WebGLRenderer({
-      // depthTest:true,
-
-    });
+    this.renderer = new THREE.WebGLRenderer();
     this.renderer.setSize(width, height);
     this.renderer.setClearColor(0x262626);
 
@@ -61,6 +61,10 @@ export default class Webgl {
     //   this.controls = new DeviceOrientationControls( this.camera );
     // else
       this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+      this.controls.minPolarAngle = Math.PI/180*90;
+      this.controls.maxPolarAngle = Math.PI/180*90;
+      this.controls.minDistance =150;
+      this.controls.maxDistance = 150;
 
   }
 
@@ -88,15 +92,6 @@ export default class Webgl {
     this.rendererCss.setSize(width, height);
     this.renderer.setSize(width, height);
   }
-  // mousedown() {
-  //   // console.log('mousedown');
-  //   this.rendererCss.domElement.style.pointerEvents = 'none';
-  //
-  // }
-  // mouseup() {
-  //   // this.rendererCss.domElement.style.pointerEvents = 'auto';
-  //
-  // }
   render() {
     if (this.params.usePostprocessing) {
       console.warn('WebGL - No effect composer set.');
@@ -106,6 +101,7 @@ export default class Webgl {
 
       for (var i = 0; i < this.hotspots.length; i++) {
           this.hotspots[i].check();
+          this.hotspots[i].objectCss.lookAt( this.camera.position );
       }
 
 

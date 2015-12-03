@@ -6,20 +6,21 @@ export default class Cylinder  {
     var texture = THREE.ImageUtils.loadTexture( "assets/sky.jpg" );
     // texture.wrapS = texture.wrapT = THREE.RepeatWrappinp;
     var material = new THREE.MeshBasicMaterial({
-    color: 0xf4d1be,
+    color: 0x3d262e,
     depthTest:true,
     map: texture,
     side: THREE.DoubleSide
     });
 
-    var circleGeometry = new THREE.CircleGeometry( 65, 32 );
+    var circleGeometry = new THREE.CircleGeometry( 130, 32 );
     this.sky = new THREE.Mesh( circleGeometry, material );
     this.sky.position.y =45;
     this.sky.rotation.x = Math.PI/180 *90;
 
     this.floor = new THREE.Mesh( circleGeometry, material );
-    this.floor.position.y =-45;
+    this.floor.position.y =-110;
     this.floor.rotation.x = Math.PI/180 *90;
+    window.floor = this.floor
 
 
     var texture = THREE.ImageUtils.loadTexture( "assets/full2.jpg" );
@@ -31,7 +32,7 @@ export default class Cylinder  {
   	// build the skybox Mesh
   	this.cylinderMesh	= new THREE.Mesh(
       //new THREE.CubeGeometry( 100, 100, 100,  1, 1, 1, null, true ),
-      new THREE.CylinderGeometry( 150, 150, 200, 60 ),
+      new THREE.CylinderGeometry( 150, 150, 250, 60 ),
       materialTest );
 
       this.cylinderMesh.position.set(0,0,0)
@@ -45,7 +46,7 @@ export default class Cylinder  {
   }
   add(scene) {
     scene.add(this.cylinderMesh);
-    scene.add(this.sky);
+    // scene.add(this.sky);
     // scene.add(this.floor);
   }
 

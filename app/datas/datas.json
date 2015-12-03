@@ -3,9 +3,8 @@
     {
       "id":"hotspot-flower1",
       "position":{
-        "x":100,
-        "y":100,
-        "z":100,
+        "angle":51,
+        "y":0,
       },
       "product":{
         "title":"Title1",
@@ -15,16 +14,54 @@
       }
     },
     {
-      "id":"hotspot-flower2",
+      "id":"hotspot-flower1",
       "position":{
-        "x":100,
-        "y":100,
-        "z":200,
+        "angle":160,
+        "y":25,
       },
       "product":{
-        "title":"Titl2",
-        "subtitle":"Subtitle2",
-        "description":"lorem ipsum2",
+        "title":"Title1",
+        "subtitle":"Subtitle1",
+        "description":"lorem ipsum1",
+        "images":[]
+      }
+    },
+    {
+      "id":"hotspot-flower1",
+      "position":{
+        "angle":211,
+        "y":-50,
+      },
+      "product":{
+        "title":"Title1",
+        "subtitle":"Subtitle1",
+        "description":"lorem ipsum1",
+        "images":[]
+      }
+    },
+    {
+      "id":"hotspot-flower1",
+      "position":{
+        "angle":308,
+        "y":-22,
+      },
+      "product":{
+        "title":"Title1",
+        "subtitle":"Subtitle1",
+        "description":"lorem ipsum1",
+        "images":[]
+      }
+    },
+    {
+      "id":"hotspot-flower1",
+      "position":{
+        "angle":47,
+        "y":51,
+      },
+      "product":{
+        "title":"Title1",
+        "subtitle":"Subtitle1",
+        "description":"lorem ipsum1",
         "images":[]
       }
     }
