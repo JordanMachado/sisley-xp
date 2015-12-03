@@ -1,30 +1,90 @@
 body, html {
-     width: 100%;
-     height: 100%;
-     margin: 0;
-     padding: 0;
-     overflow: hidden;
- }
- .hotspot {
-     background-color: red;
-     cursor:pointer;
- }
- .hotspot.active {
-   background-color: blue;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
 
- }
- svg {
-   position: relative;
-   width: 100%;
-   height: 100%;
-   pointer-events: all;
- }
- .plantView {
-   position: absolute;
-   background-color: white;
-   top:0;
-   left:100%;
-   width: 100%;
-   height: 100%;
-   z-index: 10;
-}
+.hotspot {
+  background-color: red;
+  cursor: pointer; }
+
+.hotspot.active {
+  background-color: blue; }
+
+svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: all; }
+
+.plantView {
+  position: absolute;
+  background-color: white;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 10; }
+
+.main-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); }
+  .main-button .pie {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 20px 20px;
+    border-radius: 50%;
+    background: #282446;
+    transform: translateZ(0);
+    border: 8px solid #1d1a34; }
+    .main-button .pie .mask {
+      position: absolute;
+      height: 94px;
+      width: 94px;
+      background: #282446;
+      border-radius: 50%;
+      z-index: 10;
+      top: 3px;
+      left: 3px;
+      background: url("../assets/interface/picto-button.png") no-repeat;
+      background-position: center 16px;
+      background-size: 50%;
+      background-color: #282446; }
+  .main-button .slice {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    transform-origin: bottom left;
+    transition: 1s ease-in-out;
+    overflow: hidden; }
+    .main-button .slice:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-top-right-radius: 100%;
+      background: white;
+      transform-origin: bottom left;
+      transition: 1s ease-in-out; }
+  .main-button .pie .slice {
+    transform: rotate(-90deg); }
+    .main-button .pie .slice:after {
+      transform: rotate(90deg); }
+  .main-button .pie:hover .slice:nth-child(2) {
+    transform: rotate(90deg); }
+  .main-button .pie:hover .slice:nth-child(3) {
+    transform: rotate(180deg); }
+  .main-button .pie:hover .slice:nth-child(4) {
+    transform: rotate(270deg); }
+  .main-button .pie:hover .slice,
+  .main-button .pie:hover .slice:after {
+    transform: rotate(0); }
