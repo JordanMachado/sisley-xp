@@ -1,7 +1,7 @@
 
 var OrbitControls = require('three-orbit-controls')(THREE)
 var DeviceOrientationControls = require('three.orientation')
-import Cube from './objects/Cube';
+import Cylinder from './objects/Cylinder';
 import Sphere from './objects/Sphere';
 import Hotspot from './objects/Hotspot';
 import Datas from './datas/datas.json'
@@ -24,9 +24,15 @@ export default class Webgl {
     this.sceneCss = new THREE.Scene();
 
     this.camera = new THREE.PerspectiveCamera(45, width / height, 0.001, 10000);
-    this.camera.position.z = 500;
 
-    this.renderer = new THREE.WebGLRenderer();
+
+    this.camera.position.set(0,0,10);
+    // this.camera.position.set(0,0,500);
+
+    this.renderer = new THREE.WebGLRenderer({
+      // depthTest:true,
+
+    });
     this.renderer.setSize(width, height);
     this.renderer.setClearColor(0x262626);
 
@@ -43,18 +49,17 @@ export default class Webgl {
     this.initPostprocessing();
 
 
-    this.cube = new Cube();
-    this.cube.position.set(0, 0, 100);
-    this.scene.add(this.cube);
+    this.cylinder = new Cylinder();
+    this.cylinder.add(this.scene);
 
     window.webgl = this;
 
 
 
 
-    if(isTouch)
-      this.controls = new DeviceOrientationControls( this.camera );
-    else
+    // if(isTouch)
+    //   this.controls = new DeviceOrientationControls( this.camera );
+    // else
       this.controls = new OrbitControls(this.camera, this.renderer.domElement);
 
   }
@@ -83,15 +88,15 @@ export default class Webgl {
     this.rendererCss.setSize(width, height);
     this.renderer.setSize(width, height);
   }
-  mousedown() {
-    // console.log('mousedown');
-    // this.rendererCss.domElement.style.pointerEvents = 'none';
-
-  }
-  mouseup() {
-    // this.rendererCss.domElement.style.pointerEvents = 'auto';
-
-  }
+  // mousedown() {
+  //   // console.log('mousedown');
+  //   this.rendererCss.domElement.style.pointerEvents = 'none';
+  //
+  // }
+  // mouseup() {
+  //   // this.rendererCss.domElement.style.pointerEvents = 'auto';
+  //
+  // }
   render() {
     if (this.params.usePostprocessing) {
       console.warn('WebGL - No effect composer set.');
@@ -107,7 +112,7 @@ export default class Webgl {
 
 
     }
-    this.cube.update();
+    this.cylinder.update();
     this.controls.update();
   }
 }
