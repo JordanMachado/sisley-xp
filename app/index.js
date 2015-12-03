@@ -14,14 +14,15 @@ document.body.appendChild(webgl.rendererCss.domElement);
 // GUI settings
 gui = new dat.GUI();
 gui.add(webgl.params, 'usePostprocessing');
+gui.add(webgl.hotspotsPosition, 'angle').min(0).max(360);
+gui.add(webgl.hotspotsPosition, 'y').min(-200).max(200);
 
 
 
 
 // handle resize
 window.addEventListener('resize', resizeHandler);
-// window.addEventListener('mousedown', mouseDownHandler);
-// window.addEventListener('mouseup', mouseUpHandler);
+
 
 // let's play !
 animate();
