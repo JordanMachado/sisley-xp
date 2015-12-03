@@ -5,7 +5,7 @@
   "main": "app/index.js",
   "scripts": {
     "start": "npm run dev",
-    "dev": "budo app/index.js:build/main.js --dir ./public --live --open -- -t stringify -t babelify -g glslify",
+    "dev": "budo app/index.js:build/main.js --dir ./public --live --open -- -t stringify -t babelify -g glslify | node-sass -w app/styles/main.scss -o public/build/",
     "build": "browserify -t babelify -t stripify -g glslify app/index.js | uglifyjs -o public/build/main.js"
   },
   "repository": {
@@ -32,6 +32,7 @@
     "glslify": "*",
     "stringify": "^3.1.0",
     "stripify": "*",
-    "uglifyjs": "*"
+    "uglifyjs": "*",
+    "node-sass": "*"
   }
 }
