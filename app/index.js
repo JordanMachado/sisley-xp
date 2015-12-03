@@ -20,8 +20,8 @@ gui.add(webgl.params, 'usePostprocessing');
 
 // handle resize
 window.addEventListener('resize', resizeHandler);
-window.addEventListener('mousedown', mouseDownHandler);
-window.addEventListener('mouseup', mouseUpHandler);
+// window.addEventListener('mousedown', mouseDownHandler);
+// window.addEventListener('mouseup', mouseUpHandler);
 
 // let's play !
 animate();
