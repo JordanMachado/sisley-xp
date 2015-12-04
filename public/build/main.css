@@ -26,12 +26,75 @@ body, html {
 
 .plantView {
   position: absolute;
-  background-color: white;
+  background-color: #f1f0f5;
   top: 0;
   left: 100%;
   width: 100%;
   height: 100%;
-  z-index: 10; }
+  z-index: 10;
+  background-image: url("../assets/flower.png");
+  background-size: 100%;
+  background-repeat: no-repeat; }
+  .plantView .back {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid black; }
+    .plantView .back .arrow {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -6px;
+      margin-left: -4px;
+      text-indent: -999px;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-left: 2px solid black;
+      border-top: 2px solid black;
+      transform: rotate(-45deg); }
+  .plantView .wrapper {
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 0%;
+    width: 100%;
+    padding: 40px; }
+  .plantView h1 {
+    font-family: 'PlayfairDisplay Italic';
+    color: #282446; }
+  .plantView h4 {
+    font-family: 'National Semibold';
+    text-transform: uppercase;
+    font-size: 3vh;
+    color: #9b9faa;
+    padding-left: 30px; }
+    .plantView h4:before {
+      position: absolute;
+      display: inline-block;
+      content: '';
+      width: 20px;
+      left: 40px;
+      height: 2px;
+      margin-top: 9px;
+      background: #9b9faa; }
+  .plantView p {
+    font-family: 'National Light'; }
+  .plantView .button {
+    font-family: 'National Regular';
+    text-align: center;
+    text-transform: uppercase; }
+    .plantView .button:after {
+      position: absolute;
+      display: block;
+      content: "";
+      margin-top: 10px;
+      width: 60%;
+      height: 2px;
+      background: black;
+      right: 0px; }
 
 .main-button {
   position: absolute;
@@ -94,3 +157,48 @@ body, html {
   .main-button .pie:hover .slice,
   .main-button .pie:hover .slice:after {
     transform: rotate(0); }
+
+@font-face {
+  font-family: 'PlayfairDisplay Italic';
+  src: url("../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic_gdi.eot");
+  src: url("../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic_gdi.eot?#iefix") format("embedded-opentype"), url("../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic_gdi.woff") format("woff"), url("../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic_gdi.ttf") format("truetype"), url("../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic_gdi.svg#PlayfairDisplay-Italic") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA; }
+
+@font-face {
+  font-family: 'National Semibold';
+  src: url("../fonts/National-Semibold/National-Semibold_gdi.eot");
+  src: url("../fonts/National-Semibold/National-Semibold_gdi.eot?#iefix") format("embedded-opentype"), url("../fonts/National-Semibold/National-Semibold_gdi.woff") format("woff"), url("../fonts/National-Semibold/National-Semibold_gdi.ttf") format("truetype"), url("../fonts/National-Semibold/National-Semibold_gdi.svg#National-Semibold") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA; }
+
+@font-face {
+  font-family: 'National Light';
+  src: url("../fonts/National-Light/National-Light_gdi.eot");
+  src: url("../fonts/National-Light/National-Light_gdi.eot?#iefix") format("embedded-opentype"), url("../fonts/National-Light/National-Light_gdi.woff") format("woff"), url("../fonts/National-Light/National-Light_gdi.ttf") format("truetype"), url("../fonts/National-Light/National-Light_gdi.svg#National-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA; }
+
+@font-face {
+  font-family: 'National Medium';
+  src: url("../fonts/National-Medium/National-Medium_gdi.eot");
+  src: url("../fonts/National-Medium/National-Medium_gdi.eot?#iefix") format("embedded-opentype"), url("../fonts/National-Medium/National-Medium_gdi.woff") format("woff"), url("../fonts/National-Medium/National-Medium_gdi.ttf") format("truetype"), url("../fonts/National-Medium/National-Medium_gdi.svg#National-Medium") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA; }
+
+@font-face {
+  font-family: 'National Regular';
+  src: url("../fonts/National-Regular/National-Regular_gdi.eot");
+  src: url("../fonts/National-Regular/National-Regular_gdi.eot?#iefix") format("embedded-opentype"), url("../fonts/National-Regular/National-Regular_gdi.woff") format("woff"), url("../fonts/National-Regular/National-Regular_gdi.ttf") format("truetype"), url("../fonts/National-Regular/National-Regular_gdi.svg#National-Regular") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA; }
