@@ -9,9 +9,6 @@ body, html {
   border-radius: 50%; }
   .hotspot svg {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
     pointer-events: all;
     transform: translate3d(0, 0, 0); }
   .hotspot.active {
