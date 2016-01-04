@@ -3,8 +3,8 @@ import PlanView from './../views/PlantView'
 export default class Hotspot {
   constructor(datas) {
 
-    var element = document.createElement( 'div' );
-    element.innerHTML = "<svg><circle cx='5' cy='5' r='10' fill='white'/></svg>"
+    var element = document.createElement('div');
+    element.innerHTML = "<div class='shadow'></div><svg><circle cx='5' cy='5' r='10' fill='white'/></svg>"
 		element.id = datas.id;
 		element.className = 'hotspot';
 		//element.style.opacity = 0.5;

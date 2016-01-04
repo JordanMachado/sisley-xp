@@ -9,18 +9,32 @@ body, html {
   border-radius: 50%; }
   .hotspot svg {
     position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
     pointer-events: all;
-    transform: translate3d(0, 0, 0); }
-  .hotspot.active {
-    animation: pulse 2s 0s ease-out infinite; }
+    transform: translate3d(0, 0, 0);
+    top: 5px;
+    left: 5px; }
+  .hotspot .shadow {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #7f8c8d;
+    z-index: -1;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%; }
+  .hotspot.active .shadow {
+    animation: pulse 2s ease-out infinite; }
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 8px 6px rgba(0, 149, 137, 0), 0 0 0px 0px rgba(0, 149, 137, 0), 0 0 0px 0px rgba(0, 149, 137, 0); }
-  10% {
-    box-shadow: 0 0 8px 6px rgba(29, 26, 52, 0.2), 0 0 2px 0px rgba(0, 149, 137, 0), 0 0 2px 4px rgba(29, 26, 52, 0.2); }
+    transform: scale(1);
+    opacity: 1; }
   100% {
-    box-shadow: 0 0 8px 6px rgba(0, 149, 137, 0), 0 0 0px 14px rgba(0, 149, 137, 0), 0 0 0px 14px rgba(0, 149, 137, 0); } }
+    transform: scale(3);
+    opacity: 0; } }
 
 .plantView {
   position: absolute;
@@ -146,14 +160,14 @@ body, html {
     transform: rotate(-90deg); }
     .main-button .pie .slice:after {
       transform: rotate(90deg); }
-  .main-button .pie:hover .slice:nth-child(2) {
+  .main-button .pie.two .slice:nth-child(2) {
     transform: rotate(90deg); }
-  .main-button .pie:hover .slice:nth-child(3) {
+  .main-button .pie.three .slice:nth-child(3) {
     transform: rotate(180deg); }
-  .main-button .pie:hover .slice:nth-child(4) {
+  .main-button .pie.four .slice:nth-child(4) {
     transform: rotate(270deg); }
-  .main-button .pie:hover .slice,
-  .main-button .pie:hover .slice:after {
+  .main-button .pie.one .slice,
+  .main-button .pie.one .slice:after {
     transform: rotate(0); }
 
 @font-face {
