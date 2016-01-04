@@ -1,0 +1,16 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+# use_frameworks!
+
+target 'sisley' do
+pod "JazzHands"
+end
+
+target 'sisleyTests' do
+
+end
+
+target 'sisleyUITests' do
+
+end

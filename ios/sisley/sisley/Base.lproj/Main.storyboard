@@ -39,16 +39,32 @@
                                     <action selector="onTouchUpInsideJardinBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOg-tz-5Zm"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Um0-Rp-YFm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="141"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZGP-4k-Qwz">
+                                <rect key="frame" x="281" y="149" width="39" height="37"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="UkZ-KX-kVN" firstAttribute="top" secondItem="Um0-Rp-YFm" secondAttribute="bottom" constant="65" id="7B6-iX-KnC"/>
                             <constraint firstItem="mPm-IZ-fKU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="42" id="Qki-wz-knC"/>
+                            <constraint firstItem="Um0-Rp-YFm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ztq-Gc-gKC"/>
                             <constraint firstItem="UkZ-KX-kVN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ez3-RI-GjG"/>
+                            <constraint firstItem="Um0-Rp-YFm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oR0-vN-C3Q"/>
                             <constraint firstItem="mPm-IZ-fKU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="2" id="qya-s3-Ilx"/>
+                            <constraint firstAttribute="trailing" secondItem="Um0-Rp-YFm" secondAttribute="trailing" id="wkL-Yq-Coa"/>
                             <constraint firstItem="UkZ-KX-kVN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-79" id="xzv-fW-wgC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eas-2r-Ufs"/>
+                    <connections>
+                        <outlet property="pageControl" destination="ZGP-4k-Qwz" id="i0v-7C-bZX"/>
+                        <outlet property="scrollView" destination="Um0-Rp-YFm" id="nCr-JW-Czl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -57,7 +57,6 @@ export default class PlantView {
 
     this.translateX += (e.gamma - this.translateX );
     this.translateY += (e.beta - this.translateY );
-    console.log(this.images);
     for (var i = 0; i < this.images.length; i++) {
       TweenLite.set(this.images[i],{
         transform: 'translateX('+this.translateX/this.images[i].random+'px) translateY('+this.translateY/this.images[i].random+'px)'

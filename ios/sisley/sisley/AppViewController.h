@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppViewController : UIViewController
+@interface AppViewController : UIViewController <UIScrollViewDelegate>
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+
 
 @property(nonatomic) BOOL menuIsOpen;
 @end
