@@ -26,12 +26,14 @@ export default class Hotspot {
       plantView.show();
     }
   }
+
   add(scene) {
     scene.add(this.objectCss);
   }
-  update() {
 
+  update() {
   }
+
   check() {
     let boundingBox = this.objectCss.element.getBoundingClientRect()
     // check center x

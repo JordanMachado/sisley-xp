@@ -26,7 +26,11 @@ export default class PlantView {
   }
   addToWishList() {
     WishList.add(this.datas);
-    this.hide();
+    this.addBtn.classList.add('animate');
+
+    window.setTimeout(function() {
+        this.hide();
+    }.bind(this), 1000);
   }
   render() {
     let html = Mustache.to_html(this.template, this.datas);
@@ -57,7 +61,7 @@ export default class PlantView {
 
     this.translateX += (e.gamma - this.translateX );
     this.translateY += (e.beta - this.translateY );
-    console.log(this.images);
+    //console.log(this.images);
     for (var i = 0; i < this.images.length; i++) {
       TweenLite.set(this.images[i],{
         transform: 'translateX('+this.translateX/this.images[i].random+'px) translateY('+this.translateY/this.images[i].random+'px)'
