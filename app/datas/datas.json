@@ -7,11 +7,12 @@
         "y":0,
       },
       "product":{
+        "id":"hotspot-flower1",
         "title":"Title1",
         "subtitle":"Subtitle1",
         "description":"lorem ipsum1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 
-        "images":[]
+          "images":["flower-simple1.png","flower-simple2.png","flower-simple3.png"]
       }
     },
     {
@@ -21,11 +22,12 @@
         "y":25,
       },
       "product":{
+        "id":"hotspot-flower1",
         "title":"Title1",
         "subtitle":"Subtitle1",
         "description":"lorem ipsum1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 
-        "images":[]
+          "images":["flower-simple1.png","flower-simple2.png","flower-simple3.png"]
       }
     },
     {
@@ -35,11 +37,12 @@
         "y":-50,
       },
       "product":{
+        "id":"hotspot-flower1",
         "title":"Title1",
         "subtitle":"Subtitle1",
         "description":"lorem ipsum1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 
-        "images":[]
+          "images":["flower-simple1.png","flower-simple2.png","flower-simple3.png"]
       }
     },
     {
@@ -49,11 +52,12 @@
         "y":-22,
       },
       "product":{
+        "id":"hotspot-flower1",
         "title":"Title1",
         "subtitle":"Subtitle1",
         "description":"lorem ipsum1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 
-        "images":[]
+          "images":["flower-simple1.png","flower-simple2.png","flower-simple3.png"]
       }
     },
     {
@@ -63,11 +67,12 @@
         "y":51,
       },
       "product":{
+        "id":"hotspot-flower1",
         "title":"Title1",
         "subtitle":"Subtitle1",
         "description":"lorem ipsum1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 
-        "images":[]
+          "images":["flower-simple1.png","flower-simple2.png","flower-simple3.png"]
       }
     }
   ]
