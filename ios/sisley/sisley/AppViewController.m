@@ -6,6 +6,7 @@
 //  Copyright © 2015 MACHADO Jordan. All rights reserved.
 //
 
+// https://github.com/IFTTT/JazzHands
 #import "AppViewController.h"
 #import <IFTTTJazzHands.h>
 
@@ -20,12 +21,18 @@
 
 
 
-
+- (NSUInteger)numberOfPages
+{
+    NSLog(@"yo");
+    // Tell the scroll view how many pages it should have
+    return 4;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.scrollView.delegate  = self;
     self.scrollView.contentSize = CGSizeMake(self.view.bounds.size.width*3, self.scrollView.bounds.size.height);
+    self.pageControl.numberOfPages = 3;
     self.scrollView.showsHorizontalScrollIndicator = NO;
     
     self.animator = [IFTTTAnimator new];
@@ -54,7 +61,7 @@
     // grow the circle into the background between pages 0 and 1
     IFTTTScaleAnimation *circleScaleAnimation = [IFTTTScaleAnimation animationWithView:self.jazz];
     [circleScaleAnimation addKeyframeForTime:0 scale:0.5 withEasingFunction:IFTTTEasingFunctionEaseInQuad];
-    [circleScaleAnimation addKeyframeForTime:6 scale:6];
+    [circleScaleAnimation addKeyframeForTime:1 scale:6];
     
     [self.animator addAnimation: circleScaleAnimation];
     
@@ -73,8 +80,17 @@
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    [self.animator animate:scrollView.contentOffset.x];
-    NSLog(@"scrool");
+    [self.animator animate:scrollView.contentOffset.x/self.scrollView.bounds.size.width];
+}
+
+
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    // switch the indicator when more than 50% of the previous/next page is visible
+    CGFloat pageWidth = CGRectGetWidth(self.scrollView.frame);
+    NSUInteger page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    self.pageControl.currentPage= page;
 }
 
 @end

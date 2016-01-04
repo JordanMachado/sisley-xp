@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppViewController : UIViewController <UIScrollViewDelegate>
+@interface AppViewController : UIViewController <UIScrollViewDelegate> 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
