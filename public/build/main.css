@@ -32,10 +32,18 @@ body, html {
   left: 100%;
   width: 100%;
   height: 100%;
-  z-index: 10;
-  background-image: url("../assets/flower.png");
-  background-size: 100%;
-  background-repeat: no-repeat; }
+  z-index: 10; }
+  .plantView .images-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50%;
+    background-size: 100%;
+    background-repeat: no-repeat; }
+    .plantView .images-wrapper img {
+      position: absolute;
+      width: 100%; }
   .plantView .back {
     position: absolute;
     top: 30px;
@@ -43,7 +51,8 @@ body, html {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 2px solid black; }
+    border: 2px solid black;
+    z-index: 2; }
     .plantView .back .arrow {
       position: absolute;
       left: 50%;
@@ -86,7 +95,9 @@ body, html {
   .plantView .button {
     font-family: 'National Regular';
     text-align: center;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    cursor: pointer;
+    user-select: none; }
     .plantView .button:after {
       position: absolute;
       display: block;

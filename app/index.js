@@ -19,7 +19,6 @@ gui.add(webgl.hotspotsPosition, 'y').min(-200).max(200);
 
 
 
-
 // handle resize
 window.addEventListener('resize', resizeHandler);
 
