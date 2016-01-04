@@ -6,7 +6,11 @@ class WishList {
   }
   add(product) {
     this.products.push(product);
-    slice.classList.add('add'+this.products.length);
+
+    window.setTimeout(function() {
+        slice.classList.add('add'+this.products.length);
+    }.bind(this), 800);
+
     if(this.products.length>=4) {
       this.sendIosEvent();
     }
