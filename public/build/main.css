@@ -43,6 +43,7 @@ body, html {
   animation-delay: 1s; }
 
 .full {
+  z-index: 1;
   opacity: 0;
   visibility: hidden; }
   .full h2, .full h3 {
@@ -83,6 +84,8 @@ body, html {
 
 .hotspot {
   border-radius: 50%; }
+  .hotspot.animate-full {
+    opacity: 0.5; }
   .hotspot svg {
     position: absolute;
     width: 10px;
@@ -119,7 +122,8 @@ body, html {
   left: 100%;
   width: 100%;
   height: 100%;
-  z-index: 10; }
+  z-index: 10;
+  overflow: hidden; }
   .plantView .images-wrapper {
     transform: scale(1.2);
     position: absolute;
@@ -218,6 +222,7 @@ body, html {
   position: absolute;
   bottom: 0;
   left: 50%;
+  z-index: 1;
   transform: translateX(-50%); }
   .main-button .pie {
     border-radius: 50%;
