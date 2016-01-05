@@ -60,13 +60,63 @@ body, html {
 
 
  // ANIM FULL VIEW
- .pie {
-   animation: pie-anim 2s ease infinite;
+ .pie.animate-full {
+   animation: pie-anim 2s ease forwards;
+   animation-delay: 1s;
+ }
+
+ .full {
+   opacity: 0;
+   visibility: hidden;
+
+   h2, h3 {
+     position: absolute;
+     bottom: 20px;
+     width: 100vw;
+     left: 50%;
+     transform: translate(-50%, 80px);
+   }
+   h2 {
+     bottom: 45px;
+   }
+ }
+
+ .full.animate-full {
+   opacity: 1;
+   visibility: visible;
+   animation: background-anim 2s ease forwards;
+   animation-delay: 1s;
+   h2, h3 {
+     animation: text-anim 2s ease forwards;
+   }
+ }
+
+ @keyframes background-anim{
+   0%{
+     opacity: 0;
+   }
+   100%{
+     opacity: 1;
+   }
+ }
+
+ @keyframes text-anim{
+   0%{
+     transform: translate(-50%, 80px);
+   }
+   100%{
+     transform: translate(-50%, 0px);
+   }
  }
 
  @keyframes pie-anim {
-   0%{box-shadow: 0px 0px 0px #888888;}
-   100%{box-shadow: 0px 0px 5px #888888;}
+   0%{
+     box-shadow: 0px 0px 0px rgba(33, 115, 184 ,0.41);
+   }
+   100%{
+     box-shadow: 0px 0px 60px rgba(33, 115, 184 ,0.8);
+     transform: translateY(-80px);
+   }
  }
 
  .hotspot {
@@ -122,6 +172,7 @@ body, html {
 
 
    .images-wrapper {
+     transform: scale(1.2);
      position: absolute;
      top:0px;
      left: 0px;

@@ -3,8 +3,8 @@
     {
       "id":"hotspot-flower1",
       "position":{
-        "angle":51,
-        "y":0,
+        "angle":308,
+        "y":-22,
       },
       "product":{
         "id":"hotspot-flower1",
@@ -18,8 +18,8 @@
     {
       "id":"hotspot-flower1",
       "position":{
-        "angle":160,
-        "y":25,
+        "angle":211,
+        "y":-50,
       },
       "product":{
         "id":"hotspot-flower1",
@@ -33,8 +33,8 @@
     {
       "id":"hotspot-flower1",
       "position":{
-        "angle":211,
-        "y":-50,
+        "angle":160,
+        "y":25,
       },
       "product":{
         "id":"hotspot-flower1",
@@ -48,8 +48,8 @@
     {
       "id":"hotspot-flower1",
       "position":{
-        "angle":308,
-        "y":-22,
+        "angle":51,
+        "y":0,
       },
       "product":{
         "id":"hotspot-flower1",
