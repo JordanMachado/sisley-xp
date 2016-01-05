@@ -8,11 +8,11 @@
       },
       "product":{
         "id":"hotspot-flower1",
-        "title":"Title1",
-        "subtitle":"Subtitle1",
-        "description":"lorem ipsum1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "title":"La capucine",
+        "subtitle":"Vertue éclaircissante",
+        "description":"Cette plante ornementale et comestible est originaire d'Amérique du Sud. Fleur lumineuse et illuminé, la capucine à forte de lumière, offre une forte vertu éclaircissante donnant une éclat à votre peau en application réguliére.",
 
-          "images":["flower-simple1.png","flower-simple2.png","flower-simple3.png"]
+          "images":["capucine-1.png","capucine-2.png","capucine-3.png"]
       }
     },
     {
@@ -23,11 +23,11 @@
       },
       "product":{
         "id":"hotspot-flower1",
-        "title":"Title1",
-        "subtitle":"Subtitle1",
-        "description":"lorem ipsum1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "title":"La réglisse",
+        "subtitle":"Vertue apaisante",
+        "description":"Originaire du sud de l’Europe, la réglisse utilise les racines de l’arbre du même nom. Sa capacité à retenir l’humidité, offre une forte vertu apaisante équilibrée en application cutanée.",
 
-          "images":["flower-simple1.png","flower-simple2.png","flower-simple3.png"]
+          "images":["reglisse-1.png","reglisse-2.png","reglisse-3.png"]
       }
     },
     {
@@ -38,11 +38,11 @@
       },
       "product":{
         "id":"hotspot-flower1",
-        "title":"Title1",
-        "subtitle":"Subtitle1",
-        "description":"lorem ipsum1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "title":"Le Tournesol",
+        "subtitle":"Vertue nourissante",
+        "description":"Originaire d’amerique du nord, le « tournesol » signifie « qui tourne avec le soleil ». Sa capacité transformer la lumière se retrouve dans ses graines contenant un puissante vertu nourissante.",
 
-          "images":["flower-simple1.png","flower-simple2.png","flower-simple3.png"]
+          "images":["tournesol-1.png","tournesol-2.png"]
       }
     },
     {
@@ -53,26 +53,11 @@
       },
       "product":{
         "id":"hotspot-flower1",
-        "title":"Title1",
-        "subtitle":"Subtitle1",
-        "description":"lorem ipsum1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "title":"La lavande",
+        "subtitle":"Vertue equilibrante",
+        "description":"Originaire de l'ouest du bassin méditerranéen, la lavande a souvent été utilisé en huile essentielle en medecine traditionelle. Sa capacité désinfectante et conservatrice, offre une forte vertu équilibrante en application combinée.",
 
-          "images":["flower-simple1.png","flower-simple2.png","flower-simple3.png"]
-      }
-    },
-    {
-      "id":"hotspot-flower1",
-      "position":{
-        "angle":47,
-        "y":51,
-      },
-      "product":{
-        "id":"hotspot-flower1",
-        "title":"Title1",
-        "subtitle":"Subtitle1",
-        "description":"lorem ipsum1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-
-          "images":["flower-simple1.png","flower-simple2.png","flower-simple3.png"]
+          "images":["lavande-1.png","lavande-2.png","lavande-3.png"]
       }
     }
   ]

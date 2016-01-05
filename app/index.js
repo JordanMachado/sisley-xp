@@ -12,10 +12,10 @@ document.body.appendChild(webgl.renderer.domElement);
 document.body.appendChild(webgl.rendererCss.domElement);
 
 // GUI settings
-gui = new dat.GUI();
-gui.add(webgl.params, 'usePostprocessing');
-gui.add(webgl.hotspotsPosition, 'angle').min(0).max(360);
-gui.add(webgl.hotspotsPosition, 'y').min(-200).max(200);
+// gui = new dat.GUI();
+// gui.add(webgl.params, 'usePostprocessing');
+// gui.add(webgl.hotspotsPosition, 'angle').min(0).max(360);
+// gui.add(webgl.hotspotsPosition, 'y').min(-200).max(200);
 
 
 

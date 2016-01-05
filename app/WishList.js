@@ -12,6 +12,7 @@ class WishList {
     }.bind(this), 800);
 
     if(this.products.length>=4) {
+      
       this.sendIosEvent();
     }
   }

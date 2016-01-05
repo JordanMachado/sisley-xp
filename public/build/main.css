@@ -5,6 +5,48 @@ body, html {
   padding: 0;
   overflow: hidden; }
 
+.menu {
+  position: absolute;
+  width: 100vw;
+  height: 80px; }
+  .menu a {
+    position: absolute;
+    top: 40px;
+    width: 40px; }
+  .menu .left {
+    left: 40px; }
+  .menu .right {
+    right: 20px;
+    top: 30px;
+    width: 50px; }
+  .menu img {
+    width: 50%; }
+
+.full {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background: url("../assets/interface/background.png");
+  text-align: center; }
+  .full h2 {
+    font-family: 'Lato Bold';
+    text-transform: uppercase;
+    color: white;
+    font-size: 18px; }
+  .full h3 {
+    font-family: 'PlayfairDisplay Italic';
+    font-size: 15px;
+    color: white; }
+
+.pie {
+  animation: pie-anim 2s ease infinite; }
+
+@keyframes pie-anim {
+  0% {
+    box-shadow: 0px 0px 0px #888888; }
+  100% {
+    box-shadow: 0px 0px 5px #888888; } }
+
 .hotspot {
   border-radius: 50%; }
   .hotspot svg {
@@ -85,7 +127,11 @@ body, html {
     padding: 40px; }
   .plantView h1 {
     font-family: 'PlayfairDisplay Italic';
-    color: #282446; }
+    color: #464d62;
+    font-size: 36px; }
+  .plantView h1, .plantView h4 {
+    margin: 0;
+    padding: 0; }
   .plantView h4 {
     font-family: 'National Semibold';
     text-transform: uppercase;
@@ -108,7 +154,8 @@ body, html {
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
-    user-select: none; }
+    user-select: none;
+    color: #ee8f8d; }
     .plantView .button:after {
       position: absolute;
       display: block;
@@ -116,7 +163,7 @@ body, html {
       margin-top: 10px;
       width: 60%;
       height: 2px;
-      background: black;
+      background: #ee8f8d;
       right: 0px; }
     .plantView .button.animate:after {
       content: "";
@@ -138,6 +185,7 @@ body, html {
   left: 50%;
   transform: translateX(-50%); }
   .main-button .pie {
+    border-radius: 50%;
     display: inline-block;
     position: relative;
     width: 65px;
@@ -234,6 +282,15 @@ body, html {
   font-family: 'National Regular';
   src: url("../fonts/National-Regular/National-Regular_gdi.eot");
   src: url("../fonts/National-Regular/National-Regular_gdi.eot?#iefix") format("embedded-opentype"), url("../fonts/National-Regular/National-Regular_gdi.woff") format("woff"), url("../fonts/National-Regular/National-Regular_gdi.ttf") format("truetype"), url("../fonts/National-Regular/National-Regular_gdi.svg#National-Regular") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA; }
+
+@font-face {
+  font-family: 'Lato Bold';
+  src: url("../fonts/Lato-Bold/lato-bold.eot");
+  src: url("../fonts/Lato-Bold/lato-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Bold/lato-bold.woff") format("woff"), url("../fonts/Lato-Bold/lato-bold.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;

@@ -9,6 +9,66 @@ body, html {
      padding: 0;
      overflow: hidden;
  }
+
+ .menu {
+   position: absolute;
+   width: 100vw;
+   height: 80px;
+
+   a {
+     position: absolute;
+     top: 40px;
+     width: 40px;
+   }
+
+   .left {
+    left: 40px;
+   }
+
+   .right {
+     right: 20px;
+     top: 30px;
+     width: 50px;
+   }
+
+   img {
+     width: 50%;
+   }
+ }
+
+// FULL VIEW
+ .full {
+   height: 100vh;
+   width: 100vw;
+   position: absolute;
+   background: url('../assets/interface/background.png');
+   text-align: center;
+
+   h2 {
+     font-family: 'Lato Bold';
+     text-transform: uppercase;
+     color: white;
+     font-size: 18px;
+   }
+
+   h3 {
+     font-family: 'PlayfairDisplay Italic';
+     font-size: 15px;
+     color: white;
+   }
+ }
+
+
+ // ANIM FULL VIEW
+ .pie {
+   animation: pie-anim 2s ease infinite;
+ }
+
+ @keyframes pie-anim {
+   0%{box-shadow: 0px 0px 0px #888888;}
+   100%{box-shadow: 0px 0px 5px #888888;}
+ }
+
  .hotspot {
      border-radius: 50%;
 
@@ -111,7 +171,13 @@ body, html {
 
    h1 {
      font-family:'PlayfairDisplay Italic';
-     color:$blue;
+     color:#464d62;
+     font-size: 36px;
+   }
+
+   h1, h4 {
+     margin: 0;
+     padding: 0;
    }
 
    h4 {
@@ -140,6 +206,7 @@ body, html {
      text-transform: uppercase;
      cursor:pointer;
      user-select:none;
+     color: #ee8f8d;
      &:after {
        position: absolute;
        display: block;
@@ -147,7 +214,7 @@ body, html {
         margin-top:10px;
         width: 60%;
         height: 2px;
-        background: black;
+        background: #ee8f8d;
         right: 0px;
      }
      &.animate {
@@ -180,6 +247,7 @@ body, html {
   left: 50%;
   transform: translateX(-50%);
     .pie {
+    border-radius: 50%;
     display: inline-block;
     position: relative;
     width: 65px;
@@ -324,6 +392,18 @@ body, html {
 		url('../fonts/National-Regular/National-Regular_gdi.woff') format('woff'),
 		url('../fonts/National-Regular/National-Regular_gdi.ttf') format('truetype'),
 		url('../fonts/National-Regular/National-Regular_gdi.svg#National-Regular') format('svg');
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
+@font-face {
+	font-family:'Lato Bold';
+	src: url('../fonts/Lato-Bold/lato-bold.eot');
+	src: url('../fonts/Lato-Bold/lato-bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Lato-Bold/lato-bold.woff') format('woff'),
+		url('../fonts/Lato-Bold/lato-bold.ttf') format('truetype');
 	font-weight: 300;
 	font-style: normal;
 	font-stretch: normal;
