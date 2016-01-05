@@ -1,5 +1,6 @@
 let slice = document.querySelector('.pie');
 let full = document.querySelector('.full');
+let hotspot = document.querySelector('.hotspot');
 
 class WishList {
   constructor(options) {

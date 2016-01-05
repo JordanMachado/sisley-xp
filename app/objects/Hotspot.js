@@ -7,14 +7,19 @@ export default class Hotspot {
     element.innerHTML = "<div class='shadow'></div><svg><circle cx='5' cy='5' r='10' fill='white'/></svg>"
 		element.id = datas.id;
 		element.className = 'hotspot';
-		//element.style.opacity = 0.5;
     element.style.width = "10px";
     element.style.height = "10px";
 
-		this.objectCss = new THREE.CSS3DObject( element );
-		this.objectCss.position.x = 160 *Math.cos(datas.position.angle);
+    var element2 = document.createElement('div');
+    element2.innerHTML = "<div>Jojo pidi</div>"
+		element2.id = datas.title;
+		element2.className = 'text-hotspot';
+
+    this.objectCss = new THREE.CSS3DObject(element);
+		this.objectCss2 = new THREE.CSS3DObject(element2);
+		this.objectCss.position.x = 160 * Math.cos(datas.position.angle);
 		this.objectCss.position.y = datas.position.y;
-		this.objectCss.position.z = 160 *Math.sin(datas.position.angle);
+		this.objectCss.position.z = 160 * Math.sin(datas.position.angle);
     this.objectCss.element.parent = this.objectCss;
 
     this.objectCss.element.onclick = function() {
@@ -29,6 +34,7 @@ export default class Hotspot {
 
   add(scene) {
     scene.add(this.objectCss);
+    scene.add(this.objectCss2);
   }
 
   update() {
