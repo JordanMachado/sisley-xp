@@ -127,12 +127,51 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pnM-8m-GMV"/>
+                        <segue destination="Y6H-z9-6ov" kind="relationship" relationship="rootViewController" id="eJi-qj-yfk"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5A8-PS-FK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="360" y="1069"/>
+        </scene>
+        <!--Jardin View Controller-->
+        <scene sceneID="YHf-3U-FJX">
+            <objects>
+                <viewController id="Y6H-z9-6ov" customClass="JardinViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="69J-fr-n2l"/>
+                        <viewControllerLayoutGuide type="bottom" id="tLV-KM-4zA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rpi-yi-izp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="irg-Ia-N4d">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="549"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="VFA-tq-7u9">
+                                <rect key="frame" x="281" y="555" width="39" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21176470588235294" green="0.14509803921568626" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="irg-Ia-N4d" secondAttribute="trailing" id="F7U-go-bhX"/>
+                            <constraint firstItem="tLV-KM-4zA" firstAttribute="top" secondItem="VFA-tq-7u9" secondAttribute="bottom" constant="8" id="VXk-jA-gIu"/>
+                            <constraint firstItem="VFA-tq-7u9" firstAttribute="centerX" secondItem="rpi-yi-izp" secondAttribute="centerX" id="aaA-HK-D4s"/>
+                            <constraint firstItem="irg-Ia-N4d" firstAttribute="leading" secondItem="rpi-yi-izp" secondAttribute="leading" id="ofY-e0-We0"/>
+                            <constraint firstItem="VFA-tq-7u9" firstAttribute="top" secondItem="irg-Ia-N4d" secondAttribute="bottom" constant="6" id="qAO-G8-ds3"/>
+                            <constraint firstItem="irg-Ia-N4d" firstAttribute="top" secondItem="rpi-yi-izp" secondAttribute="top" id="yRe-c8-YI1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="If5-JZ-h4l"/>
+                    <connections>
+                        <outlet property="pageControl" destination="VFA-tq-7u9" id="NlB-rW-xes"/>
+                        <outlet property="scrollView" destination="irg-Ia-N4d" id="b97-4I-jKj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZGx-tT-IgX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1213" y="1125"/>
         </scene>
     </scenes>
 </document>

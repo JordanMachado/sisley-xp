@@ -19,6 +19,7 @@ export default class PlantView {
       left:'100%'
     })
     window.removeEventListener('deviceorientation',  this._onDeviceOrientation)
+    this.moveFlowers(0,0);
 
   }
   update(datas) {
@@ -57,17 +58,17 @@ export default class PlantView {
     this.translateY = 0 ;
 
   }
-  onDeviceOrientation(e) {
-
-    this.translateX += (e.gamma - this.translateX );
-    this.translateY += (e.beta - this.translateY );
+  moveFlowers(gamma,beta) {
+    this.translateX += (gamma - this.translateX );
+    this.translateY += (beta - this.translateY );
 
     for (var i = 0; i < this.images.length; i++) {
       TweenLite.set(this.images[i],{
         transform: 'translateX('+this.translateX/this.images[i].random+'px) translateY('+this.translateY/this.images[i].random+'px)'
       })
     }
-
-
+  }
+  onDeviceOrientation(e) {
+    this.moveFlowers(e.gamma,e.beta);
   }
 }
