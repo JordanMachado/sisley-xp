@@ -8,7 +8,77 @@ body, html {
      margin: 0;
      padding: 0;
      overflow: hidden;
- }
+}
+
+.intro {
+  background: #1e253a;
+  opacity: 0.95;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+
+  .wrapper {
+    width: 80vw;
+    margin: 150px auto 0;
+  }
+
+  .title {
+    font-family: 'National Semibold';
+    color: white;
+    font-size: 19px;
+    text-transform: uppercase;
+  }
+  .text {
+    color: #767676;
+    font-family: 'PlayfairDisplay Italic';
+    font-size: 15px;
+    margin: 50px 0px;
+  }
+  .next {
+    font-family: 'National Regular';
+    color: #ed6f6c;
+    text-decoration: none;
+    width: 80vw;
+    text-align: center;
+    display: block;
+    margin-left: 20px;
+
+    &:after {
+      position: absolute;
+      display: block;
+       content:"";
+       margin-top:10px;
+       width: 50%;
+       height: 2px;
+       background: #ee8f8d;
+       right: 0px;
+    }
+    &.animate {
+      &:after {
+        content:"";
+        animation: anim-button 1s linear;
+      }
+    }
+  }
+
+  @keyframes anim-button {
+    0%{
+      right: 0%;
+    }
+    50%{
+      right: -100%;
+    }
+    50.1%{
+      right: 100%;
+    }
+    100%{
+      right: 0%;
+    }
+  }
+}
 
  .menu {
    position: absolute;
@@ -39,15 +109,15 @@ body, html {
 .full-menu {
   position: absolute;
   top: -100%;
-  transition: all 0.8s ease;
+  transition: all 0.4s ease;
 
   &.active {
-    transition: all 0.8s ease;
+    transition: all 0.4s ease;
     top: 0;
 
     .shadow {
-      transition: all 0.8s ease;
-      transition-delay: 0.8s;
+      transition: all 0.4s ease;
+      transition-delay: 0.2s;
       opacity: 0.4;
     }
   }
@@ -56,17 +126,47 @@ body, html {
     position: absolute;
     height: 300px;
     border-bottom: 80px solid transparent;
-    border-left: 100vw solid white;
+    border-left: 100vw solid #f1f1f3;
     border-top: 0px solid transparent;
     z-index: 1;
 
-    .close {
+    .container {
+      left: -100vw;
       position: absolute;
-      top: 30px;
-      font-size: 20px;
-      z-index: 22;
-      left: -90vw;
-      display: block;
+      width: 100vw;
+
+      ul {
+        list-style: none;
+        text-align: center;
+        margin: 0;
+        margin-top: 50px;
+        padding: 0;
+        font-size: 17px;
+        color: #a9abb3;
+        li {
+          font-family:'National Light';
+          padding-bottom: 40px;
+          &:after {
+            content: "";
+            width: 40px;
+            height: 2px;
+            background: #92949c;
+            position: absolute;
+            transform: translateX(-50%);
+            left: 50%;
+            margin-top: 40px;
+          }
+        }
+      }
+    }
+
+    .close {
+      img {
+        width: 50%;
+      }
+      position: absolute;
+      top: 20px;
+      left: 20px;
     }
   }
 
@@ -80,6 +180,64 @@ body, html {
     width: 100vw;
   }
 }
+
+
+.full-search {
+  position: absolute;
+  bottom: 0px;
+  transition: all 0.4s ease;
+
+  &.active {
+    transition: all 0.4s ease;
+    bottom: 350px;
+
+    .shadow {
+      transition: all 0.4s ease;
+      transition-delay: 0.2s;
+      opacity: 0.4;
+    }
+  }
+
+  .guillotine {
+    position: absolute;
+    height: 300px;
+    border-bottom: 0px solid transparent;
+    border-right: 100vw solid #f1f1f3;
+    border-top: 50px solid transparent;
+    z-index: 2;
+
+    .container {
+      position: absolute;
+      width: 100vw;
+
+      ul {
+        list-style: none;
+        margin: 0;
+        margin-top: 50px;
+        padding: 0;
+        padding-left: 92px;
+        font-size: 17px;
+        color: #3d4457;
+        li {
+          text-transform: uppercase;
+          font-family:'National Medium';
+          padding-bottom: 40px;
+          // &:after {
+          //   content: "";
+          //   width: 40px;
+          //   height: 2px;
+          //   background: #92949c;
+          //   position: absolute;
+          //   transform: translateX(-50%);
+          //   left: 50%;
+          //   margin-top: 40px;
+          // }
+        }
+      }
+    }
+  }
+}
+
 
 // FULL VIEW
  .full {
@@ -402,6 +560,15 @@ body, html {
   left: 50%;
   z-index: 1;
   transform: translateX(-50%);
+  transition: all 0.4s linear;
+
+  &.hide {
+    bottom: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.4s linear;
+  }
+
     .pie {
     border-radius: 50%;
     display: inline-block;
