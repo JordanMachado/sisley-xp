@@ -19,12 +19,10 @@ export default class PlantView {
   hide () {
     TweenLite.to(this.el,.3,{
       left:'100%'
-    })
+  })
 
     window.removeEventListener('deviceorientation',  this._onDeviceOrientation)
     this.moveFlowers(0,0);
-
-
   }
 
   update(datas) {

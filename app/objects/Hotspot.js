@@ -10,17 +10,24 @@ export default class Hotspot {
     element.style.width = "10px";
     element.style.height = "10px";
 
-    var element2 = document.createElement('div');
-    element2.innerHTML = "<div>Jojo pidi</div>"
-		element2.id = datas.title;
-		element2.className = 'text-hotspot';
-
     this.objectCss = new THREE.CSS3DObject(element);
-		this.objectCss2 = new THREE.CSS3DObject(element2);
 		this.objectCss.position.x = 160 * Math.cos(datas.position.angle);
 		this.objectCss.position.y = datas.position.y;
 		this.objectCss.position.z = 160 * Math.sin(datas.position.angle);
     this.objectCss.element.parent = this.objectCss;
+
+
+    var element2 = document.createElement('div');
+    element2.innerHTML = datas.product.title + "<br/>";
+    element2.innerHTML += "<div class='subtitle'>" + datas.product.summary + "</div>";
+		element2.className = 'text-hotspot';
+    element2.id = datas.id;
+
+    this.objectCss2 = new THREE.CSS3DObject(element2);
+    this.objectCss2.position.x = 160 * Math.cos(datas.position.angle);
+		this.objectCss2.position.y = datas.position.y + 45;
+		this.objectCss2.position.z = 160 * Math.sin(datas.position.angle);
+    this.objectCss2.element.parent = this.objectCss2;
 
     this.objectCss.element.onclick = function() {
       let plantView = new PlanView({
@@ -47,9 +54,12 @@ export default class Hotspot {
 
     if(dist<150) {
       if(this.objectCss.element.classList.contains('active')) return;
-      this.objectCss.element.classList.add('active')
+      if(this.objectCss2.element.classList.contains('animated-text')) return;
+      this.objectCss.element.classList.add('active');
+      this.objectCss2.element.classList.add('animated-text');
     } else {
       this.objectCss.element.classList.remove('active');
+      this.objectCss2.element.classList.remove('animated-text');
     }
   }
 
