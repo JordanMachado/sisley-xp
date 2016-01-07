@@ -43,6 +43,7 @@ export default class Webgl {
 
     this.buildHotspot();
 
+    this.initIntro()
     this.initTuto()
     this.initMenu();
     this.initSearch();
@@ -55,23 +56,18 @@ export default class Webgl {
 
     window.webgl = this;
 
-
-
-    if(isTouch)
-      this.controls = new DeviceOrientationControls( this.camera );
-    else
-
+    // if(isTouch)
+    //   this.controls = new DeviceOrientationControls( this.camera );
+    // else
       this.controls = new OrbitControls(this.camera, this.renderer.domElement);
       this.controls.minPolarAngle = Math.PI/180*90;
       this.controls.maxPolarAngle = Math.PI/180*90;
       this.controls.minDistance =150;
       this.controls.maxDistance = 150;
-
   }
 
   initPostprocessing() {
     if (!this.params.usePostprocessing) { return; }
-
   }
 
   buildHotspot() {
@@ -82,12 +78,56 @@ export default class Webgl {
     }
   }
 
-  initTuto(){
-    this.next = document.querySelector('.next');
-    this.wrapper = document.querySelector('.wrapper .text');
+  initIntro(){
+    this.next = document.querySelector('.intro .next');
+    this.wrapper = document.querySelector('.intro .text');
+    this.tuto = document.querySelector('.intro');
+    var index = 0;
+    var self = this;
 
     this.next.onclick =()=> {
       this.wrapper.innerHTML = "Votre découverte à travers l’univers phytotérpique, vous invite à collecter les plantes qui vous intéressent. Prenez en un des boutures et plantez les dans votre serre. Vos recolte vous ressemble, nous sommes à l’ecoute de vos recherches et vous proposerons un produit.";
+
+      if (index <= 300) {
+        // TweenLite.to(this.wrapper, 0.6,{
+        //   marginLeft: -index+'vw',
+        //   delay: 1,
+        //   onComplete: function(){
+        //     self.next.classList.remove('animate');
+        //   }
+        // })
+      }
+    }
+  }
+
+  initTuto(){
+    this.next = document.querySelector('.tuto .next');
+    this.wrapper = document.querySelector('.tuto .main-wrapper');
+    this.tuto = document.querySelector('.tuto');
+    var index = 0;
+    var self = this;
+
+    this.next.onclick =()=> {
+      index +=100;
+      this.next.classList.add('animate');
+
+      if (index <= 300) {
+        TweenLite.to(this.wrapper, 0.6,{
+          marginLeft: -index+'vw',
+          delay: 1,
+          onComplete: function(){
+            self.next.classList.remove('animate');
+          }
+        })
+      } else {
+        TweenLite.to(this.tuto, 0.6,{
+          opacity: 0,
+          delay: 1,
+          onComplete: function(){
+            self.tuto.classList.add('delete');
+          }
+        })
+      }
     }
   }
 
