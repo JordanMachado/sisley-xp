@@ -15,8 +15,6 @@
 		49167EBE1BEA57540024E615 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49167EBC1BEA57540024E615 /* LaunchScreen.storyboard */; };
 		49167EC91BEA57540024E615 /* sisleyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49167EC81BEA57540024E615 /* sisleyTests.m */; };
 		49167ED41BEA57540024E615 /* sisleyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49167ED31BEA57540024E615 /* sisleyUITests.m */; };
-		49167EE31BEA5B490024E615 /* ExperienceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49167EE21BEA5B490024E615 /* ExperienceViewController.m */; settings = {ASSET_TAGS = (); }; };
-		49167EED1BEA646E0024E615 /* UIViewController+Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 49167EEC1BEA646E0024E615 /* UIViewController+Menu.m */; settings = {ASSET_TAGS = (); }; };
 		491A87421C3D1EE7002ECF5B /* RecolteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491A87411C3D1EE7002ECF5B /* RecolteViewController.m */; settings = {ASSET_TAGS = (); }; };
 		491A87441C3D24ED002ECF5B /* recolte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 491A87431C3D24ED002ECF5B /* recolte.jpg */; settings = {ASSET_TAGS = (); }; };
 		491A87491C3D330F002ECF5B /* recolte-white-overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 491A87481C3D330F002ECF5B /* recolte-white-overlay.png */; settings = {ASSET_TAGS = (); }; };
@@ -53,9 +51,14 @@
 		49E14F791C3C057C005510B1 /* jardin-text.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E14F781C3C057C005510B1 /* jardin-text.png */; settings = {ASSET_TAGS = (); }; };
 		49E14F7D1C3C13A6005510B1 /* jardin_background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49E14F7C1C3C13A6005510B1 /* jardin_background2.jpg */; settings = {ASSET_TAGS = (); }; };
 		49F551021C3EBE1000C45B78 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F551011C3EBE1000C45B78 /* Social.framework */; };
-		49F551051C3EC14100C45B78 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F551041C3EC14100C45B78 /* VideoViewController.m */; settings = {ASSET_TAGS = (); }; };
 		49F551081C3EC31100C45B78 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F551071C3EC31100C45B78 /* AVKit.framework */; };
 		49F5510E1C3EC70400C45B78 /* test.mov in Resources */ = {isa = PBXBuildFile; fileRef = 49F5510D1C3EC70400C45B78 /* test.mov */; settings = {ASSET_TAGS = (); }; };
+		49F551111C3ECBAC00C45B78 /* test2_2.mov in Resources */ = {isa = PBXBuildFile; fileRef = 49F551101C3ECBAC00C45B78 /* test2_2.mov */; settings = {ASSET_TAGS = (); }; };
+		49F551131C3ECCA100C45B78 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F551121C3ECCA100C45B78 /* MediaPlayer.framework */; };
+		49F551151C3ECE5000C45B78 /* movie.mov in Resources */ = {isa = PBXBuildFile; fileRef = 49F551141C3ECE5000C45B78 /* movie.mov */; settings = {ASSET_TAGS = (); }; };
+		49F551171C3ED0B000C45B78 /* movie_1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 49F551161C3ECFA100C45B78 /* movie_1.mp4 */; settings = {ASSET_TAGS = (); }; };
+		49F551191C3ED61000C45B78 /* Mori_Splsh_Bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49F551181C3ED61000C45B78 /* Mori_Splsh_Bg.jpg */; settings = {ASSET_TAGS = (); }; };
+		49F5511B1C3ED67900C45B78 /* Mori_Splsh 2 (0-00-00-00).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49F5511A1C3ED67900C45B78 /* Mori_Splsh 2 (0-00-00-00).jpg */; settings = {ASSET_TAGS = (); }; };
 		75C0CFFF34842DE7A8ED546C /* libPods-sisley.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D9A9E888FF3A87E602A44F /* libPods-sisley.a */; };
 /* End PBXBuildFile section */
 
@@ -96,10 +99,6 @@
 		49167ECF1BEA57540024E615 /* sisleyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sisleyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49167ED31BEA57540024E615 /* sisleyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sisleyUITests.m; sourceTree = "<group>"; };
 		49167ED51BEA57540024E615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49167EE11BEA5B490024E615 /* ExperienceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExperienceViewController.h; sourceTree = "<group>"; };
-		49167EE21BEA5B490024E615 /* ExperienceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExperienceViewController.m; sourceTree = "<group>"; };
-		49167EEB1BEA646E0024E615 /* UIViewController+Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Menu.h"; sourceTree = "<group>"; };
-		49167EEC1BEA646E0024E615 /* UIViewController+Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Menu.m"; sourceTree = "<group>"; };
 		491A87401C3D1EE7002ECF5B /* RecolteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecolteViewController.h; sourceTree = "<group>"; };
 		491A87411C3D1EE7002ECF5B /* RecolteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecolteViewController.m; sourceTree = "<group>"; };
 		491A87431C3D24ED002ECF5B /* recolte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = recolte.jpg; path = assets/recolte.jpg; sourceTree = SOURCE_ROOT; };
@@ -140,10 +139,15 @@
 		49E14F781C3C057C005510B1 /* jardin-text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "jardin-text.png"; path = "assets/jardin-text.png"; sourceTree = SOURCE_ROOT; };
 		49E14F7C1C3C13A6005510B1 /* jardin_background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jardin_background2.jpg; path = assets/jardin_background2.jpg; sourceTree = SOURCE_ROOT; };
 		49F551011C3EBE1000C45B78 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		49F551031C3EC14100C45B78 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
-		49F551041C3EC14100C45B78 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		49F551071C3EC31100C45B78 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		49F5510D1C3EC70400C45B78 /* test.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = test.mov; path = ../../../../../../Downloads/test.mov; sourceTree = "<group>"; };
+		49F5510F1C3ECB4D00C45B78 /* test2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = test2.mp4; path = ../../../../../../Downloads/test2.mp4; sourceTree = "<group>"; };
+		49F551101C3ECBAC00C45B78 /* test2_2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = test2_2.mov; path = ../../../../../../Downloads/test2_2.mov; sourceTree = "<group>"; };
+		49F551121C3ECCA100C45B78 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		49F551141C3ECE5000C45B78 /* movie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = movie.mov; path = ../../../../../../Downloads/Splash_Screen/movie.mov; sourceTree = "<group>"; };
+		49F551161C3ECFA100C45B78 /* movie_1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = movie_1.mp4; path = ../../../../../../Downloads/Splash_Screen/movie_1.mp4; sourceTree = "<group>"; };
+		49F551181C3ED61000C45B78 /* Mori_Splsh_Bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Mori_Splsh_Bg.jpg; path = ../../../../../../Downloads/Splash_Screen/Mori_Splsh_Bg.jpg; sourceTree = "<group>"; };
+		49F5511A1C3ED67900C45B78 /* Mori_Splsh 2 (0-00-00-00).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Mori_Splsh 2 (0-00-00-00).jpg"; path = "../../../../../../Downloads/Splash_Screen/Mori_Splsh 2 (0-00-00-00).jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F551131C3ECCA100C45B78 /* MediaPlayer.framework in Frameworks */,
 				49F551081C3EC31100C45B78 /* AVKit.framework in Frameworks */,
 				49F551021C3EBE1000C45B78 /* Social.framework in Frameworks */,
 				498ED6A91C3E7DCD000F8A73 /* MapKit.framework in Frameworks */,
@@ -239,15 +244,6 @@
 			path = sisleyUITests;
 			sourceTree = "<group>";
 		};
-		49167EE41BEA5B500024E615 /* experience */ = {
-			isa = PBXGroup;
-			children = (
-				49167EE11BEA5B490024E615 /* ExperienceViewController.h */,
-				49167EE21BEA5B490024E615 /* ExperienceViewController.m */,
-			);
-			name = experience;
-			sourceTree = "<group>";
-		};
 		49167EE51BEA5B580024E615 /* app */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,24 +257,11 @@
 			isa = PBXGroup;
 			children = (
 				49167EE51BEA5B580024E615 /* app */,
-				49167EE41BEA5B500024E615 /* experience */,
-				49167EEA1BEA63F70024E615 /* UIViewController+menu */,
-				49ADE5EF1BF0AE5300190312 /* menu */,
 				49E14F751C3C013A005510B1 /* jardin */,
 				491A87451C3D3040002ECF5B /* recolte */,
 				498ED6A61C3E7B3A000F8A73 /* map */,
-				49F551061C3EC16100C45B78 /* videoIntro */,
 			);
 			name = viewControllers;
-			sourceTree = "<group>";
-		};
-		49167EEA1BEA63F70024E615 /* UIViewController+menu */ = {
-			isa = PBXGroup;
-			children = (
-				49167EEB1BEA646E0024E615 /* UIViewController+Menu.h */,
-				49167EEC1BEA646E0024E615 /* UIViewController+Menu.m */,
-			);
-			name = "UIViewController+menu";
 			sourceTree = "<group>";
 		};
 		491A87451C3D3040002ECF5B /* recolte */ = {
@@ -304,7 +287,13 @@
 		49ADE5E71BF0A73D00190312 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				49F551141C3ECE5000C45B78 /* movie.mov */,
+				49F5511A1C3ED67900C45B78 /* Mori_Splsh 2 (0-00-00-00).jpg */,
 				49F5510D1C3EC70400C45B78 /* test.mov */,
+				49F5510F1C3ECB4D00C45B78 /* test2.mp4 */,
+				49F551161C3ECFA100C45B78 /* movie_1.mp4 */,
+				49F551181C3ED61000C45B78 /* Mori_Splsh_Bg.jpg */,
+				49F551101C3ECBAC00C45B78 /* test2_2.mov */,
 				49E14F761C3C0353005510B1 /* jardin_background.jpg */,
 				491A87431C3D24ED002ECF5B /* recolte.jpg */,
 				498ED6A11C3E78E1000F8A73 /* recolte-text2.png */,
@@ -339,13 +328,6 @@
 			name = assets;
 			sourceTree = "<group>";
 		};
-		49ADE5EF1BF0AE5300190312 /* menu */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = menu;
-			sourceTree = "<group>";
-		};
 		49E14F751C3C013A005510B1 /* jardin */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,18 +337,10 @@
 			name = jardin;
 			sourceTree = "<group>";
 		};
-		49F551061C3EC16100C45B78 /* videoIntro */ = {
-			isa = PBXGroup;
-			children = (
-				49F551031C3EC14100C45B78 /* VideoViewController.h */,
-				49F551041C3EC14100C45B78 /* VideoViewController.m */,
-			);
-			name = videoIntro;
-			sourceTree = "<group>";
-		};
 		58B592DAE7340010813FC49A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49F551121C3ECCA100C45B78 /* MediaPlayer.framework */,
 				49F551071C3EC31100C45B78 /* AVKit.framework */,
 				49F551011C3EBE1000C45B78 /* Social.framework */,
 				498ED6A71C3E7C3E000F8A73 /* MapKit.framework */,
@@ -454,6 +428,7 @@
 				TargetAttributes = {
 					49167EAA1BEA57540024E615 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = WTHU2VGBMP;
 					};
 					49167EC31BEA57540024E615 = {
 						CreatedOnToolsVersion = 7.0;
@@ -498,6 +473,7 @@
 				491A876F1C3D5800002ECF5B /* recolte.jpg in Resources */,
 				49ADE5E91BF0A7A600190312 /* menu.png in Resources */,
 				491A87701C3D5800002ECF5B /* store-locator-icon.png in Resources */,
+				49F551111C3ECBAC00C45B78 /* test2_2.mov in Resources */,
 				491A87651C3D5800002ECF5B /* jardin_background2.jpg in Resources */,
 				49167EBE1BEA57540024E615 /* LaunchScreen.storyboard in Resources */,
 				491A876D1C3D5800002ECF5B /* recolte-white-overlay.jpg in Resources */,
@@ -510,15 +486,19 @@
 				491A87641C3D5800002ECF5B /* jardin_background.jpg in Resources */,
 				491A87441C3D24ED002ECF5B /* recolte.jpg in Resources */,
 				491A87491C3D330F002ECF5B /* recolte-white-overlay.png in Resources */,
+				49F5511B1C3ED67900C45B78 /* Mori_Splsh 2 (0-00-00-00).jpg in Resources */,
 				49F5510E1C3EC70400C45B78 /* test.mov in Resources */,
 				49E14F7D1C3C13A6005510B1 /* jardin_background2.jpg in Resources */,
 				491A876E1C3D5800002ECF5B /* recolte-white-overlay.png in Resources */,
 				498ED6AB1C3E808F000F8A73 /* pin.png in Resources */,
+				49F551171C3ED0B000C45B78 /* movie_1.mp4 in Resources */,
 				491A876C1C3D5800002ECF5B /* recolte-titre.png in Resources */,
 				491A87621C3D5800002ECF5B /* back-button.png in Resources */,
 				491A874B1C3D4FD1002ECF5B /* store-locator-icon.png in Resources */,
 				491A87691C3D5800002ECF5B /* product.png in Resources */,
+				49F551151C3ECE5000C45B78 /* movie.mov in Resources */,
 				491A87731C3D6563002ECF5B /* product-page.png in Resources */,
+				49F551191C3ED61000C45B78 /* Mori_Splsh_Bg.jpg in Resources */,
 				491A87671C3D5800002ECF5B /* menu.png in Resources */,
 				491A87511C3D5044002ECF5B /* back-button.png in Resources */,
 				491A876B1C3D5800002ECF5B /* recolte-text1.png in Resources */,
@@ -596,10 +576,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49F551051C3EC14100C45B78 /* VideoViewController.m in Sources */,
 				49E14F741C3C005F005510B1 /* JardinViewController.m in Sources */,
-				49167EE31BEA5B490024E615 /* ExperienceViewController.m in Sources */,
-				49167EED1BEA646E0024E615 /* UIViewController+Menu.m in Sources */,
 				498ED6AE1C3E8113000F8A73 /* Annotation.m in Sources */,
 				498ED6A51C3E7B36000F8A73 /* MapViewController.m in Sources */,
 				49167EB61BEA57540024E615 /* AppViewController.m in Sources */,
@@ -745,10 +722,13 @@
 			baseConfigurationReference = 2150A5CDC201E865A123E191 /* Pods-sisley.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = sisley/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gobelins.sisley;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gobelins.sisleyyy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -757,10 +737,13 @@
 			baseConfigurationReference = 21DE5D3E704D4D036EF7D2DD /* Pods-sisley.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = sisley/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gobelins.sisley;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gobelins.sisleyyy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
