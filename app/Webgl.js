@@ -42,7 +42,10 @@ export default class Webgl {
 		this.rendererCss.domElement.style.top = 0;
 
     this.buildHotspot();
+
+    this.initTuto()
     this.initMenu();
+    this.initSearch();
 
     this.composer = null;
     this.initPostprocessing();
@@ -77,17 +80,42 @@ export default class Webgl {
     }
   }
 
+  initTuto(){
+    this.next = document.querySelector('.next');
+    this.wrapper = document.querySelector('.wrapper .text');
+
+    this.next.onclick =()=> {
+      this.wrapper.innerHTML = "Votre découverte à travers l’univers phytotérpique, vous invite à collecter les plantes qui vous intéressent. Prenez en un des boutures et plantez les dans votre serre. Vos recolte vous ressemble, nous sommes à l’ecoute de vos recherches et vous proposerons un produit.";
+    }
+  }
+
   initMenu(){
     this.closeBtn = document.querySelector('.close');
     this.showBtn = document.querySelector('.left');
     this.menu = document.querySelector('.full-menu');
+    this.mainBtn = document.querySelector('.main-button');
 
     this.showBtn.onclick =()=> {
       this.menu.classList.toggle('active');
+      this.mainBtn.classList.toggle('hide');
     }
     this.closeBtn.onclick =()=> {
       this.menu.classList.toggle('active');
+      this.mainBtn.classList.toggle('hide');
     }
+  }
+
+  initSearch(){
+    this.closeBtnC = document.querySelector('.close');
+    this.showBtnR = document.querySelector('.right');
+    this.menuS = document.querySelector('.full-search');
+
+    this.showBtnR.onclick =()=> {
+      this.menuS.classList.toggle('active');
+    }
+    // this.closeBtnC.onclick =()=> {
+    //   this.menuS.classList.toggle('active');
+    // }
   }
 
   resize(width, height) {
