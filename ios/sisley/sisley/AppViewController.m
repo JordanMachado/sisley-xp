@@ -8,89 +8,118 @@
 
 // https://github.com/IFTTT/JazzHands
 #import "AppViewController.h"
-#import <IFTTTJazzHands.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import "JardinViewController.h"
+
+
 
 @interface AppViewController ()
 
-@property (nonatomic, strong) IFTTTAnimator *animator;
 
-@property (nonatomic, strong) UIImageView *jazz;
+
 @end
 
 @implementation AppViewController
 
 
 
-- (NSUInteger)numberOfPages
-{
-    NSLog(@"yo");
-    // Tell the scroll view how many pages it should have
-    return 4;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.scrollView.delegate  = self;
-    self.scrollView.contentSize = CGSizeMake(self.view.bounds.size.width*3, self.scrollView.bounds.size.height);
-    self.pageControl.numberOfPages = 3;
-    self.scrollView.showsHorizontalScrollIndicator = NO;
-    
-    self.animator = [IFTTTAnimator new];
-
-
-    [self configureViews];
-    [self configureAnimations];
-    
-    
-  
+    [self start_Web_View ];
+    [self configureVideo];
     
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 
-- (void)configureViews
-{
+
+
+
+#pragma mark webview delegate
+
+- (void) start_Web_View {
+    self.webview = [[UIWebView alloc] initWithFrame:CGRectMake(0,0,self.view.bounds.size.width,self.view.bounds.size.height)];
+    self.webview.delegate = self;
+    NSURL *url = [NSURL URLWithString:@"http://stackoverflow.com/questions/7418815/background-loading-a-url-in-a-uiwebview"];
+    [self.webview loadRequest:[NSURLRequest requestWithURL:url]];
     
-    self.jazz = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"menu"]];
-    self.jazz.frame = CGRectMake((self.view.bounds.size.width / 2) - ((self.jazz.bounds.size.width ) / 2), self.scrollView.bounds.size.height / 2 - (self.jazz.bounds.size.height ) / 2, self.jazz.bounds.size.width, self.jazz.bounds.size.height );
-    [self.scrollView addSubview:self.jazz];
-    
+    // go do something else to amuse the user while the web site loads...
 }
--(void)configureAnimations {
+
+
+- (void) webViewDidFinishLoad:(UIWebView *)webView {
+    NSLog(@"finished loaded");
+    [self.moviePlayer play];
+
+}
+
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    NSString *URLString = [[request URL] absoluteString];
+       // [self performSegueWithIdentifier:@"jardin" sender:self];
+            [self performSegueWithIdentifier:@"inscription" sender:self];
+    if ([URLString isEqualToString:@"http://www.example.com/step3.htm"]) {
+        // The user reached step 3!
+    }
+    return YES;
+}
+
+-(void)configureVideo{
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *moviePath = [bundle pathForResource:@"movie_1" ofType:@"mp4"];
+    NSURL *movieURL = [NSURL fileURLWithPath:moviePath] ;
     
-    // grow the circle into the background between pages 0 and 1
-    IFTTTScaleAnimation *circleScaleAnimation = [IFTTTScaleAnimation animationWithView:self.jazz];
-    [circleScaleAnimation addKeyframeForTime:0 scale:0.5 withEasingFunction:IFTTTEasingFunctionEaseInQuad];
-    [circleScaleAnimation addKeyframeForTime:1 scale:6];
+    self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
     
-    [self.animator addAnimation: circleScaleAnimation];
+    
+    self.moviePlayer.controlStyle = MPMovieControlStyleNone;
+    // self.moviePlayer.view.transform = CGAffineTransformConcat(self.moviePlayer.view.transform, CGAffineTransformMakeRotation(M_PI_2));
+    UIWindow *backgroundWindow = [[UIApplication sharedApplication] keyWindow];
+    [self.moviePlayer.view setFrame:backgroundWindow.frame];
+    //    [self.view addSubview:self.moviePlayer.view];
+    [self.view insertSubview:self.moviePlayer.view atIndex:0];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(MPMoviePlayerPlaybackStateDidChange:)
+                                                 name:MPMoviePlayerPlaybackStateDidChangeNotification
+                                               object:nil];
+
+}
+
+
+-(void)hidePoster:(id)sender  {
+    self.posterImg.alpha = 0.0;
+}
+
+- (void)MPMoviePlayerPlaybackStateDidChange:(NSNotification *)notification
+{
+
+    if (self.moviePlayer.playbackState == 1)
+    {
+       
+        [NSTimer scheduledTimerWithTimeInterval:.06 target:self selector:@selector(hidePoster:) userInfo:nil repeats:NO];
+        
+    }
+    if (self.moviePlayer.playbackState == 2)
+    {
+        [self.view insertSubview:self.webview atIndex:0];
+        [UIView animateWithDuration:.4f delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            self.moviePlayer.view.alpha = 0.;
+        } completion:NULL];
+
+    }
     
 }
 
-- (IBAction)onTouchUpInsideXpBtn:(id)sender {
-    NSLog(@"xp");
-}
-- (IBAction)onTouchUpInsideJardinBtn:(id)sender {
-        NSLog(@"jardin");
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    [self.animator animate:scrollView.contentOffset.x/self.scrollView.bounds.size.width];
-}
 
 
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-{
-    // switch the indicator when more than 50% of the previous/next page is visible
-    CGFloat pageWidth = CGRectGetWidth(self.scrollView.frame);
-    NSUInteger page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    self.pageControl.currentPage= page;
-}
+
 
 @end

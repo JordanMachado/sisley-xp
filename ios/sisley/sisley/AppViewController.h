@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
 
-@interface AppViewController : UIViewController <UIScrollViewDelegate> 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+@interface AppViewController : UIViewController <UIWebViewDelegate>
 
+@property (strong, nonatomic) MPMoviePlayerController *moviePlayer;
+@property (strong, nonatomic) IBOutlet UIWebView *webview;
+@property (weak, nonatomic) IBOutlet UIImageView *posterImg;
 
 @property(nonatomic) BOOL menuIsOpen;
 @end

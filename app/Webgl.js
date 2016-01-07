@@ -59,6 +59,7 @@ export default class Webgl {
     // if(isTouch)
     //   this.controls = new DeviceOrientationControls( this.camera );
     // else
+    
       this.controls = new OrbitControls(this.camera, this.renderer.domElement);
       this.controls.minPolarAngle = Math.PI/180*90;
       this.controls.maxPolarAngle = Math.PI/180*90;

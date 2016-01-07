@@ -1,28 +1,21 @@
 //
-//  ExperienceViewController.m
+//  InscriptionViewController.m
 //  sisley
 //
-//  Created by MACHADO Jordan on 04/11/2015.
-//  Copyright © 2015 MACHADO Jordan. All rights reserved.
+//  Created by MACHADO Jordan on 07/01/2016.
+//  Copyright © 2016 MACHADO Jordan. All rights reserved.
 //
 
-#import "ExperienceViewController.h"
+#import "InscriptionViewController.h"
 
-
-
-@interface ExperienceViewController ()
+@interface InscriptionViewController ()
 
 @end
 
-@implementation ExperienceViewController
+@implementation InscriptionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.webview.delegate = self;
-    self.url = @"http://lacostewinter.seeourwork.cn/en/intro";
-    [self.webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url]]];
- 
-    
     // Do any additional setup after loading the view.
 }
 
@@ -30,9 +23,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    NSLog(@"webview loaded");
+- (IBAction)validey:(id)sender {
+}
+- (IBAction)back:(id)sender {
+        [self.navigationController popViewControllerAnimated:YES];
 }
 
 /*

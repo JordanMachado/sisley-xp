@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (weak, nonatomic) IBOutlet UIImageView *imageOverlay;
+@property (weak, nonatomic) IBOutlet UIImageView *blackOverlay;
 
 @end
