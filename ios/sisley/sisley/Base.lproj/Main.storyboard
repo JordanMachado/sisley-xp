@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="daT-HD-6xh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--App View Controller-->
@@ -167,11 +168,121 @@
                     <connections>
                         <outlet property="pageControl" destination="VFA-tq-7u9" id="NlB-rW-xes"/>
                         <outlet property="scrollView" destination="irg-Ia-N4d" id="b97-4I-jKj"/>
+                        <segue destination="fC7-1N-laS" kind="push" identifier="recolte" id="VvX-kC-99L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGx-tT-IgX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1213" y="1125"/>
         </scene>
+        <!--Recolte View Controller-->
+        <scene sceneID="aoX-6A-ytx">
+            <objects>
+                <viewController id="fC7-1N-laS" customClass="RecolteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gn3-Gf-8Uc"/>
+                        <viewControllerLayoutGuide type="bottom" id="fct-UY-14X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rge-YE-WkN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recolte.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Dfv-zj-rBd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recolte-white-overlay.png" translatesAutoresizingMaskIntoConstraints="NO" id="epV-EF-bpS">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wVH-Zr-nmH">
+                                <rect key="frame" x="0.0" y="100" width="600" height="420"/>
+                                <color key="tintColor" red="0.94901960780000005" green="0.45882352939999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3m-sh-LIG">
+                                <rect key="frame" x="378" y="523" width="27" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="5YJ-kr-GSa"/>
+                                    <constraint firstAttribute="width" constant="27" id="8BS-Kb-AcN"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="store-locator-icon.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uct-jh-YMX">
+                                <rect key="frame" x="175" y="523" width="48" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="TTN-tb-NqW"/>
+                                    <constraint firstAttribute="height" constant="43" id="gAQ-cJ-nhJ"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="sysley-site-icon.png"/>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="umy-vz-obE">
+                                <rect key="frame" x="281" y="477" width="39" height="37"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNv-ey-5Tp">
+                                <rect key="frame" x="20" y="28" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="8Yh-mk-LMz"/>
+                                    <constraint firstAttribute="width" constant="37" id="F8e-xN-Q7M"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="back-button.png"/>
+                                <connections>
+                                    <action selector="onTouchUpinside:" destination="fC7-1N-laS" eventType="touchUpInside" id="B2b-DG-cBl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLz-mo-tR5">
+                                <rect key="frame" x="278" y="523" width="45" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="tRc-wA-GV3"/>
+                                    <constraint firstAttribute="height" constant="43" id="v5D-hj-bi7"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="card-icon.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eNv-ey-5Tp" firstAttribute="top" secondItem="gn3-Gf-8Uc" secondAttribute="bottom" constant="8" id="0pA-fv-MDz"/>
+                            <constraint firstItem="wVH-Zr-nmH" firstAttribute="leading" secondItem="rge-YE-WkN" secondAttribute="leading" id="9lX-Ng-0Xp"/>
+                            <constraint firstItem="fct-UY-14X" firstAttribute="top" secondItem="Dfv-zj-rBd" secondAttribute="bottom" id="AuL-SE-d4D"/>
+                            <constraint firstItem="jLz-mo-tR5" firstAttribute="leading" secondItem="Uct-jh-YMX" secondAttribute="trailing" constant="55" id="BuG-ym-Tso"/>
+                            <constraint firstItem="Uct-jh-YMX" firstAttribute="top" secondItem="wVH-Zr-nmH" secondAttribute="bottom" constant="3" id="CyR-Mi-GL7"/>
+                            <constraint firstAttribute="trailing" secondItem="epV-EF-bpS" secondAttribute="trailing" id="F6d-GT-Tkl"/>
+                            <constraint firstItem="n3m-sh-LIG" firstAttribute="leading" secondItem="jLz-mo-tR5" secondAttribute="trailing" constant="55" id="Hfv-IS-4iw"/>
+                            <constraint firstItem="fct-UY-14X" firstAttribute="top" secondItem="wVH-Zr-nmH" secondAttribute="bottom" constant="80" id="Ldv-MW-3Wf"/>
+                            <constraint firstItem="wVH-Zr-nmH" firstAttribute="top" secondItem="gn3-Gf-8Uc" secondAttribute="bottom" constant="80" id="Lm8-AP-Uy0"/>
+                            <constraint firstItem="fct-UY-14X" firstAttribute="top" secondItem="n3m-sh-LIG" secondAttribute="bottom" constant="34" id="OhC-HH-LK0"/>
+                            <constraint firstItem="fct-UY-14X" firstAttribute="top" secondItem="epV-EF-bpS" secondAttribute="bottom" id="SFK-cE-I1O"/>
+                            <constraint firstItem="epV-EF-bpS" firstAttribute="leading" secondItem="rge-YE-WkN" secondAttribute="leading" id="TDf-nQ-SBh"/>
+                            <constraint firstAttribute="trailing" secondItem="Dfv-zj-rBd" secondAttribute="trailing" id="UKT-4f-ysq"/>
+                            <constraint firstItem="Dfv-zj-rBd" firstAttribute="leading" secondItem="rge-YE-WkN" secondAttribute="leading" id="aOk-Yc-Sgh"/>
+                            <constraint firstItem="jLz-mo-tR5" firstAttribute="centerX" secondItem="rge-YE-WkN" secondAttribute="centerX" id="cPI-24-ofl"/>
+                            <constraint firstItem="epV-EF-bpS" firstAttribute="top" secondItem="rge-YE-WkN" secondAttribute="top" id="e12-3n-SO7"/>
+                            <constraint firstItem="eNv-ey-5Tp" firstAttribute="leading" secondItem="rge-YE-WkN" secondAttribute="leadingMargin" id="fOL-kT-9ud"/>
+                            <constraint firstAttribute="trailing" secondItem="wVH-Zr-nmH" secondAttribute="trailing" id="gvm-c6-tCl"/>
+                            <constraint firstItem="n3m-sh-LIG" firstAttribute="top" secondItem="wVH-Zr-nmH" secondAttribute="bottom" constant="3" id="ihd-Gy-5Vl"/>
+                            <constraint firstItem="fct-UY-14X" firstAttribute="top" secondItem="Uct-jh-YMX" secondAttribute="bottom" constant="34" id="ocz-4a-ba6"/>
+                            <constraint firstItem="fct-UY-14X" firstAttribute="top" secondItem="jLz-mo-tR5" secondAttribute="bottom" constant="34" id="p9p-K7-r8z"/>
+                            <constraint firstItem="umy-vz-obE" firstAttribute="centerX" secondItem="rge-YE-WkN" secondAttribute="centerX" id="pZU-RM-d92"/>
+                            <constraint firstItem="Dfv-zj-rBd" firstAttribute="top" secondItem="rge-YE-WkN" secondAttribute="top" id="qpr-Wy-cXl"/>
+                            <constraint firstItem="umy-vz-obE" firstAttribute="centerX" secondItem="rge-YE-WkN" secondAttribute="centerX" id="r2x-lp-edP"/>
+                            <constraint firstItem="jLz-mo-tR5" firstAttribute="top" secondItem="umy-vz-obE" secondAttribute="bottom" constant="9" id="vPW-Hm-7X8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nMV-8Q-CpJ"/>
+                    <connections>
+                        <outlet property="imageOverlay" destination="epV-EF-bpS" id="Q68-bq-gJ0"/>
+                        <outlet property="pageControl" destination="umy-vz-obE" id="E1I-uA-8kS"/>
+                        <outlet property="scrollView" destination="wVH-Zr-nmH" id="bf2-pc-vUK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ji-vl-bin" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1894" y="1125"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="back-button.png" width="52" height="52"/>
+        <image name="card-icon.png" width="63" height="60"/>
+        <image name="recolte-white-overlay.png" width="640" height="1136"/>
+        <image name="recolte.jpg" width="640" height="1136"/>
+        <image name="store-locator-icon.png" width="45" height="71"/>
+        <image name="sysley-site-icon.png" width="65" height="59"/>
+    </resources>
 </document>
