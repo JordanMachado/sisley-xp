@@ -56,7 +56,8 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSString *URLString = [[request URL] absoluteString];
-        [self performSegueWithIdentifier:@"jardin" sender:self];
+       // [self performSegueWithIdentifier:@"jardin" sender:self];
+            [self performSegueWithIdentifier:@"inscription" sender:self];
     if ([URLString isEqualToString:@"http://www.example.com/step3.htm"]) {
         // The user reached step 3!
     }
@@ -66,7 +67,6 @@
 -(void)configureVideo{
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *moviePath = [bundle pathForResource:@"movie_1" ofType:@"mp4"];
-    NSLog(@"%@",moviePath);
     NSURL *movieURL = [NSURL fileURLWithPath:moviePath] ;
     
     self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];

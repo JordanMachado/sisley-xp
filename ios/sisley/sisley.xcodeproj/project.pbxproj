@@ -59,6 +59,9 @@
 		49F551171C3ED0B000C45B78 /* movie_1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 49F551161C3ECFA100C45B78 /* movie_1.mp4 */; settings = {ASSET_TAGS = (); }; };
 		49F551191C3ED61000C45B78 /* Mori_Splsh_Bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49F551181C3ED61000C45B78 /* Mori_Splsh_Bg.jpg */; settings = {ASSET_TAGS = (); }; };
 		49F5511B1C3ED67900C45B78 /* Mori_Splsh 2 (0-00-00-00).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49F5511A1C3ED67900C45B78 /* Mori_Splsh 2 (0-00-00-00).jpg */; settings = {ASSET_TAGS = (); }; };
+		49F5511E1C3EE43E00C45B78 /* InscriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F5511D1C3EE43E00C45B78 /* InscriptionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		49F551211C3EE4D400C45B78 /* bg-inscription.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49F551201C3EE4D400C45B78 /* bg-inscription.jpg */; settings = {ASSET_TAGS = (); }; };
+		49F551231C3EE98400C45B78 /* validey.png in Resources */ = {isa = PBXBuildFile; fileRef = 49F551221C3EE98400C45B78 /* validey.png */; settings = {ASSET_TAGS = (); }; };
 		75C0CFFF34842DE7A8ED546C /* libPods-sisley.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D9A9E888FF3A87E602A44F /* libPods-sisley.a */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +151,10 @@
 		49F551161C3ECFA100C45B78 /* movie_1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = movie_1.mp4; path = ../../../../../../Downloads/Splash_Screen/movie_1.mp4; sourceTree = "<group>"; };
 		49F551181C3ED61000C45B78 /* Mori_Splsh_Bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Mori_Splsh_Bg.jpg; path = ../../../../../../Downloads/Splash_Screen/Mori_Splsh_Bg.jpg; sourceTree = "<group>"; };
 		49F5511A1C3ED67900C45B78 /* Mori_Splsh 2 (0-00-00-00).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Mori_Splsh 2 (0-00-00-00).jpg"; path = "../../../../../../Downloads/Splash_Screen/Mori_Splsh 2 (0-00-00-00).jpg"; sourceTree = "<group>"; };
+		49F5511C1C3EE43E00C45B78 /* InscriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InscriptionViewController.h; sourceTree = "<group>"; };
+		49F5511D1C3EE43E00C45B78 /* InscriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InscriptionViewController.m; sourceTree = "<group>"; };
+		49F551201C3EE4D400C45B78 /* bg-inscription.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "bg-inscription.jpg"; path = "assets/bg-inscription.jpg"; sourceTree = SOURCE_ROOT; };
+		49F551221C3EE98400C45B78 /* validey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = validey.png; path = assets/validey.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +267,7 @@
 				49E14F751C3C013A005510B1 /* jardin */,
 				491A87451C3D3040002ECF5B /* recolte */,
 				498ED6A61C3E7B3A000F8A73 /* map */,
+				49F5511F1C3EE44100C45B78 /* inscription */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -289,9 +297,11 @@
 			children = (
 				49F551141C3ECE5000C45B78 /* movie.mov */,
 				49F5511A1C3ED67900C45B78 /* Mori_Splsh 2 (0-00-00-00).jpg */,
+				49F551201C3EE4D400C45B78 /* bg-inscription.jpg */,
 				49F5510D1C3EC70400C45B78 /* test.mov */,
 				49F5510F1C3ECB4D00C45B78 /* test2.mp4 */,
 				49F551161C3ECFA100C45B78 /* movie_1.mp4 */,
+				49F551221C3EE98400C45B78 /* validey.png */,
 				49F551181C3ED61000C45B78 /* Mori_Splsh_Bg.jpg */,
 				49F551101C3ECBAC00C45B78 /* test2_2.mov */,
 				49E14F761C3C0353005510B1 /* jardin_background.jpg */,
@@ -335,6 +345,15 @@
 				49E14F731C3C005F005510B1 /* JardinViewController.m */,
 			);
 			name = jardin;
+			sourceTree = "<group>";
+		};
+		49F5511F1C3EE44100C45B78 /* inscription */ = {
+			isa = PBXGroup;
+			children = (
+				49F5511C1C3EE43E00C45B78 /* InscriptionViewController.h */,
+				49F5511D1C3EE43E00C45B78 /* InscriptionViewController.m */,
+			);
+			name = inscription;
 			sourceTree = "<group>";
 		};
 		58B592DAE7340010813FC49A /* Frameworks */ = {
@@ -466,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				498ED6A01C3E7576000F8A73 /* overlay.png in Resources */,
+				49F551211C3EE4D400C45B78 /* bg-inscription.jpg in Resources */,
 				491A87631C3D5800002ECF5B /* card-icon.png in Resources */,
 				491A876A1C3D5800002ECF5B /* recolte-text.png in Resources */,
 				49E14F771C3C0353005510B1 /* jardin_background.jpg in Resources */,
@@ -480,6 +500,7 @@
 				491A874D1C3D4FD6002ECF5B /* sysley-site-icon.png in Resources */,
 				49167EBB1BEA57540024E615 /* Assets.xcassets in Resources */,
 				491A874F1C3D4FDC002ECF5B /* card-icon.png in Resources */,
+				49F551231C3EE98400C45B78 /* validey.png in Resources */,
 				498ED6A21C3E78E1000F8A73 /* recolte-text2.png in Resources */,
 				49E14F791C3C057C005510B1 /* jardin-text.png in Resources */,
 				491A87681C3D5800002ECF5B /* product-name.png in Resources */,
@@ -583,6 +604,7 @@
 				49167EB31BEA57540024E615 /* AppDelegate.m in Sources */,
 				491A87421C3D1EE7002ECF5B /* RecolteViewController.m in Sources */,
 				49167EB01BEA57540024E615 /* main.m in Sources */,
+				49F5511E1C3EE43E00C45B78 /* InscriptionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
