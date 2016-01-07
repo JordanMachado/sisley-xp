@@ -8,6 +8,7 @@
 
 #import "JardinViewController.h"
 #import <IFTTTJazzHands.h>
+#import "RecolteViewController.h"
 
 @interface JardinViewController ()
 @property (nonatomic, strong) IFTTTAnimator *animator;
@@ -55,7 +56,7 @@
 -(void)configureJardin1 {
     
     self.jardin_background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"jardin_background.jpg"]];
-    self.jardin_background.frame = CGRectMake(0,0,self.view.bounds.size.width,self.view.bounds.size.height);
+    self.jardin_background.frame = CGRectMake(0,-20,self.view.bounds.size.width,self.view.bounds.size.height);
     [self.scrollView addSubview:self.jardin_background];
     
     
@@ -78,7 +79,7 @@
 -(void)configureJardin2 {
     
     self.jardin_background2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"jardin_background2.jpg"]];
-    self.jardin_background2.frame = CGRectMake(self.view.bounds.size.width,0,self.view.bounds.size.width,self.view.bounds.size.height);
+    self.jardin_background2.frame = CGRectMake(self.view.bounds.size.width,-20,self.view.bounds.size.width,self.view.bounds.size.height);
     [self.scrollView addSubview:self.jardin_background2];
     
     
@@ -124,6 +125,8 @@
 
 -(IBAction)onTouchUpInsideGo:(id)sender {
     NSLog(@"yolo");
+    [self performSegueWithIdentifier:@"recolte" sender:self];
+
 }
 
 -(void)configureAnimations {

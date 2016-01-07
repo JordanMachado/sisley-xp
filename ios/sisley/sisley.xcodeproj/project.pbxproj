@@ -17,6 +17,30 @@
 		49167ED41BEA57540024E615 /* sisleyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49167ED31BEA57540024E615 /* sisleyUITests.m */; };
 		49167EE31BEA5B490024E615 /* ExperienceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49167EE21BEA5B490024E615 /* ExperienceViewController.m */; settings = {ASSET_TAGS = (); }; };
 		49167EED1BEA646E0024E615 /* UIViewController+Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 49167EEC1BEA646E0024E615 /* UIViewController+Menu.m */; settings = {ASSET_TAGS = (); }; };
+		491A87421C3D1EE7002ECF5B /* RecolteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491A87411C3D1EE7002ECF5B /* RecolteViewController.m */; settings = {ASSET_TAGS = (); }; };
+		491A87441C3D24ED002ECF5B /* recolte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 491A87431C3D24ED002ECF5B /* recolte.jpg */; settings = {ASSET_TAGS = (); }; };
+		491A87491C3D330F002ECF5B /* recolte-white-overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 491A87481C3D330F002ECF5B /* recolte-white-overlay.png */; settings = {ASSET_TAGS = (); }; };
+		491A874B1C3D4FD1002ECF5B /* store-locator-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 491A874A1C3D4FD1002ECF5B /* store-locator-icon.png */; settings = {ASSET_TAGS = (); }; };
+		491A874D1C3D4FD6002ECF5B /* sysley-site-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 491A874C1C3D4FD6002ECF5B /* sysley-site-icon.png */; settings = {ASSET_TAGS = (); }; };
+		491A874F1C3D4FDC002ECF5B /* card-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 491A874E1C3D4FDC002ECF5B /* card-icon.png */; settings = {ASSET_TAGS = (); }; };
+		491A87511C3D5044002ECF5B /* back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 491A87501C3D5044002ECF5B /* back-button.png */; settings = {ASSET_TAGS = (); }; };
+		491A87621C3D5800002ECF5B /* back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 491A87521C3D5800002ECF5B /* back-button.png */; settings = {ASSET_TAGS = (); }; };
+		491A87631C3D5800002ECF5B /* card-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 491A87531C3D5800002ECF5B /* card-icon.png */; settings = {ASSET_TAGS = (); }; };
+		491A87641C3D5800002ECF5B /* jardin_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 491A87541C3D5800002ECF5B /* jardin_background.jpg */; settings = {ASSET_TAGS = (); }; };
+		491A87651C3D5800002ECF5B /* jardin_background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 491A87551C3D5800002ECF5B /* jardin_background2.jpg */; settings = {ASSET_TAGS = (); }; };
+		491A87661C3D5800002ECF5B /* jardin-text.png in Resources */ = {isa = PBXBuildFile; fileRef = 491A87561C3D5800002ECF5B /* jardin-text.png */; settings = {ASSET_TAGS = (); }; };
+		491A87671C3D5800002ECF5B /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 491A87571C3D5800002ECF5B /* menu.png */; settings = {ASSET_TAGS = (); }; };
+		491A87681C3D5800002ECF5B /* product-name.png in Resources */ = {isa = PBXBuildFile; fileRef = 491A87581C3D5800002ECF5B /* product-name.png */; settings = {ASSET_TAGS = (); }; };
+		491A87691C3D5800002ECF5B /* product.png in Resources */ = {isa = PBXBuildFile; fileRef = 491A87591C3D5800002ECF5B /* product.png */; settings = {ASSET_TAGS = (); }; };
+		491A876A1C3D5800002ECF5B /* recolte-text.png in Resources */ = {isa = PBXBuildFile; fileRef = 491A875A1C3D5800002ECF5B /* recolte-text.png */; settings = {ASSET_TAGS = (); }; };
+		491A876B1C3D5800002ECF5B /* recolte-text1.png in Resources */ = {isa = PBXBuildFile; fileRef = 491A875B1C3D5800002ECF5B /* recolte-text1.png */; settings = {ASSET_TAGS = (); }; };
+		491A876C1C3D5800002ECF5B /* recolte-titre.png in Resources */ = {isa = PBXBuildFile; fileRef = 491A875C1C3D5800002ECF5B /* recolte-titre.png */; settings = {ASSET_TAGS = (); }; };
+		491A876D1C3D5800002ECF5B /* recolte-white-overlay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 491A875D1C3D5800002ECF5B /* recolte-white-overlay.jpg */; settings = {ASSET_TAGS = (); }; };
+		491A876E1C3D5800002ECF5B /* recolte-white-overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 491A875E1C3D5800002ECF5B /* recolte-white-overlay.png */; settings = {ASSET_TAGS = (); }; };
+		491A876F1C3D5800002ECF5B /* recolte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 491A875F1C3D5800002ECF5B /* recolte.jpg */; settings = {ASSET_TAGS = (); }; };
+		491A87701C3D5800002ECF5B /* store-locator-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 491A87601C3D5800002ECF5B /* store-locator-icon.png */; settings = {ASSET_TAGS = (); }; };
+		491A87711C3D5800002ECF5B /* sysley-site-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 491A87611C3D5800002ECF5B /* sysley-site-icon.png */; settings = {ASSET_TAGS = (); }; };
+		491A87731C3D6563002ECF5B /* product-page.png in Resources */ = {isa = PBXBuildFile; fileRef = 491A87721C3D6563002ECF5B /* product-page.png */; settings = {ASSET_TAGS = (); }; };
 		49ADE5E91BF0A7A600190312 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 49ADE5E81BF0A7A600190312 /* menu.png */; settings = {ASSET_TAGS = (); }; };
 		49ADE5EB1BF0A8DD00190312 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49ADE5EA1BF0A8DD00190312 /* Menu.storyboard */; settings = {ASSET_TAGS = (); }; };
 		49E14F741C3C005F005510B1 /* JardinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E14F731C3C005F005510B1 /* JardinViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -67,6 +91,31 @@
 		49167EE21BEA5B490024E615 /* ExperienceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExperienceViewController.m; sourceTree = "<group>"; };
 		49167EEB1BEA646E0024E615 /* UIViewController+Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Menu.h"; sourceTree = "<group>"; };
 		49167EEC1BEA646E0024E615 /* UIViewController+Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Menu.m"; sourceTree = "<group>"; };
+		491A87401C3D1EE7002ECF5B /* RecolteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecolteViewController.h; sourceTree = "<group>"; };
+		491A87411C3D1EE7002ECF5B /* RecolteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecolteViewController.m; sourceTree = "<group>"; };
+		491A87431C3D24ED002ECF5B /* recolte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = recolte.jpg; path = assets/recolte.jpg; sourceTree = SOURCE_ROOT; };
+		491A87481C3D330F002ECF5B /* recolte-white-overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recolte-white-overlay.png"; path = "assets/recolte-white-overlay.png"; sourceTree = SOURCE_ROOT; };
+		491A874A1C3D4FD1002ECF5B /* store-locator-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "store-locator-icon.png"; path = "assets/store-locator-icon.png"; sourceTree = SOURCE_ROOT; };
+		491A874C1C3D4FD6002ECF5B /* sysley-site-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sysley-site-icon.png"; path = "assets/sysley-site-icon.png"; sourceTree = SOURCE_ROOT; };
+		491A874E1C3D4FDC002ECF5B /* card-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card-icon.png"; path = "assets/card-icon.png"; sourceTree = SOURCE_ROOT; };
+		491A87501C3D5044002ECF5B /* back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button.png"; path = "assets/back-button.png"; sourceTree = SOURCE_ROOT; };
+		491A87521C3D5800002ECF5B /* back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button.png"; path = "assets/back-button.png"; sourceTree = SOURCE_ROOT; };
+		491A87531C3D5800002ECF5B /* card-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card-icon.png"; path = "assets/card-icon.png"; sourceTree = SOURCE_ROOT; };
+		491A87541C3D5800002ECF5B /* jardin_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jardin_background.jpg; path = assets/jardin_background.jpg; sourceTree = SOURCE_ROOT; };
+		491A87551C3D5800002ECF5B /* jardin_background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jardin_background2.jpg; path = assets/jardin_background2.jpg; sourceTree = SOURCE_ROOT; };
+		491A87561C3D5800002ECF5B /* jardin-text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "jardin-text.png"; path = "assets/jardin-text.png"; sourceTree = SOURCE_ROOT; };
+		491A87571C3D5800002ECF5B /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = assets/menu.png; sourceTree = SOURCE_ROOT; };
+		491A87581C3D5800002ECF5B /* product-name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "product-name.png"; path = "assets/product-name.png"; sourceTree = SOURCE_ROOT; };
+		491A87591C3D5800002ECF5B /* product.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = product.png; path = assets/product.png; sourceTree = SOURCE_ROOT; };
+		491A875A1C3D5800002ECF5B /* recolte-text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recolte-text.png"; path = "assets/recolte-text.png"; sourceTree = SOURCE_ROOT; };
+		491A875B1C3D5800002ECF5B /* recolte-text1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recolte-text1.png"; path = "assets/recolte-text1.png"; sourceTree = SOURCE_ROOT; };
+		491A875C1C3D5800002ECF5B /* recolte-titre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recolte-titre.png"; path = "assets/recolte-titre.png"; sourceTree = SOURCE_ROOT; };
+		491A875D1C3D5800002ECF5B /* recolte-white-overlay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "recolte-white-overlay.jpg"; path = "assets/recolte-white-overlay.jpg"; sourceTree = SOURCE_ROOT; };
+		491A875E1C3D5800002ECF5B /* recolte-white-overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recolte-white-overlay.png"; path = "assets/recolte-white-overlay.png"; sourceTree = SOURCE_ROOT; };
+		491A875F1C3D5800002ECF5B /* recolte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = recolte.jpg; path = assets/recolte.jpg; sourceTree = SOURCE_ROOT; };
+		491A87601C3D5800002ECF5B /* store-locator-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "store-locator-icon.png"; path = "assets/store-locator-icon.png"; sourceTree = SOURCE_ROOT; };
+		491A87611C3D5800002ECF5B /* sysley-site-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sysley-site-icon.png"; path = "assets/sysley-site-icon.png"; sourceTree = SOURCE_ROOT; };
+		491A87721C3D6563002ECF5B /* product-page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "product-page.png"; path = "assets/product-page.png"; sourceTree = SOURCE_ROOT; };
 		49ADE5E81BF0A7A600190312 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = assets/menu.png; sourceTree = SOURCE_ROOT; };
 		49ADE5EA1BF0A8DD00190312 /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		49E14F721C3C005F005510B1 /* JardinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JardinViewController.h; sourceTree = "<group>"; };
@@ -193,6 +242,7 @@
 				49167EEA1BEA63F70024E615 /* UIViewController+menu */,
 				49ADE5EF1BF0AE5300190312 /* menu */,
 				49E14F751C3C013A005510B1 /* jardin */,
+				491A87451C3D3040002ECF5B /* recolte */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -206,11 +256,43 @@
 			name = "UIViewController+menu";
 			sourceTree = "<group>";
 		};
+		491A87451C3D3040002ECF5B /* recolte */ = {
+			isa = PBXGroup;
+			children = (
+				491A87401C3D1EE7002ECF5B /* RecolteViewController.h */,
+				491A87411C3D1EE7002ECF5B /* RecolteViewController.m */,
+			);
+			name = recolte;
+			sourceTree = "<group>";
+		};
 		49ADE5E71BF0A73D00190312 /* assets */ = {
 			isa = PBXGroup;
 			children = (
 				49E14F761C3C0353005510B1 /* jardin_background.jpg */,
+				491A87431C3D24ED002ECF5B /* recolte.jpg */,
+				491A87481C3D330F002ECF5B /* recolte-white-overlay.png */,
+				491A874C1C3D4FD6002ECF5B /* sysley-site-icon.png */,
+				491A87521C3D5800002ECF5B /* back-button.png */,
+				491A87531C3D5800002ECF5B /* card-icon.png */,
+				491A87721C3D6563002ECF5B /* product-page.png */,
+				491A87541C3D5800002ECF5B /* jardin_background.jpg */,
+				491A87551C3D5800002ECF5B /* jardin_background2.jpg */,
+				491A87561C3D5800002ECF5B /* jardin-text.png */,
+				491A87571C3D5800002ECF5B /* menu.png */,
+				491A87581C3D5800002ECF5B /* product-name.png */,
+				491A87591C3D5800002ECF5B /* product.png */,
+				491A875A1C3D5800002ECF5B /* recolte-text.png */,
+				491A875B1C3D5800002ECF5B /* recolte-text1.png */,
+				491A875C1C3D5800002ECF5B /* recolte-titre.png */,
+				491A875D1C3D5800002ECF5B /* recolte-white-overlay.jpg */,
+				491A875E1C3D5800002ECF5B /* recolte-white-overlay.png */,
+				491A875F1C3D5800002ECF5B /* recolte.jpg */,
+				491A87601C3D5800002ECF5B /* store-locator-icon.png */,
+				491A87611C3D5800002ECF5B /* sysley-site-icon.png */,
+				491A874A1C3D4FD1002ECF5B /* store-locator-icon.png */,
 				49E14F7C1C3C13A6005510B1 /* jardin_background2.jpg */,
+				491A874E1C3D4FDC002ECF5B /* card-icon.png */,
+				491A87501C3D5044002ECF5B /* back-button.png */,
 				49E14F781C3C057C005510B1 /* jardin-text.png */,
 				49ADE5E81BF0A7A600190312 /* menu.png */,
 			);
@@ -356,13 +438,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491A87631C3D5800002ECF5B /* card-icon.png in Resources */,
 				49ADE5EB1BF0A8DD00190312 /* Menu.storyboard in Resources */,
+				491A876A1C3D5800002ECF5B /* recolte-text.png in Resources */,
 				49E14F771C3C0353005510B1 /* jardin_background.jpg in Resources */,
+				491A87711C3D5800002ECF5B /* sysley-site-icon.png in Resources */,
+				491A876F1C3D5800002ECF5B /* recolte.jpg in Resources */,
 				49ADE5E91BF0A7A600190312 /* menu.png in Resources */,
+				491A87701C3D5800002ECF5B /* store-locator-icon.png in Resources */,
+				491A87651C3D5800002ECF5B /* jardin_background2.jpg in Resources */,
 				49167EBE1BEA57540024E615 /* LaunchScreen.storyboard in Resources */,
+				491A876D1C3D5800002ECF5B /* recolte-white-overlay.jpg in Resources */,
+				491A874D1C3D4FD6002ECF5B /* sysley-site-icon.png in Resources */,
 				49167EBB1BEA57540024E615 /* Assets.xcassets in Resources */,
+				491A874F1C3D4FDC002ECF5B /* card-icon.png in Resources */,
 				49E14F791C3C057C005510B1 /* jardin-text.png in Resources */,
+				491A87681C3D5800002ECF5B /* product-name.png in Resources */,
+				491A87641C3D5800002ECF5B /* jardin_background.jpg in Resources */,
+				491A87441C3D24ED002ECF5B /* recolte.jpg in Resources */,
+				491A87491C3D330F002ECF5B /* recolte-white-overlay.png in Resources */,
 				49E14F7D1C3C13A6005510B1 /* jardin_background2.jpg in Resources */,
+				491A876E1C3D5800002ECF5B /* recolte-white-overlay.png in Resources */,
+				491A876C1C3D5800002ECF5B /* recolte-titre.png in Resources */,
+				491A87621C3D5800002ECF5B /* back-button.png in Resources */,
+				491A874B1C3D4FD1002ECF5B /* store-locator-icon.png in Resources */,
+				491A87691C3D5800002ECF5B /* product.png in Resources */,
+				491A87731C3D6563002ECF5B /* product-page.png in Resources */,
+				491A87671C3D5800002ECF5B /* menu.png in Resources */,
+				491A87511C3D5044002ECF5B /* back-button.png in Resources */,
+				491A876B1C3D5800002ECF5B /* recolte-text1.png in Resources */,
+				491A87661C3D5800002ECF5B /* jardin-text.png in Resources */,
 				49167EB91BEA57540024E615 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +546,7 @@
 				49167EED1BEA646E0024E615 /* UIViewController+Menu.m in Sources */,
 				49167EB61BEA57540024E615 /* AppViewController.m in Sources */,
 				49167EB31BEA57540024E615 /* AppDelegate.m in Sources */,
+				491A87421C3D1EE7002ECF5B /* RecolteViewController.m in Sources */,
 				49167EB01BEA57540024E615 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
