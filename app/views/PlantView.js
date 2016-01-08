@@ -67,6 +67,13 @@ export default class PlantView {
     this.translateX += (gamma - this.translateX );
     this.translateY += (beta - this.translateY );
 
+    for (var i = 0; i < this.images.length; i++) {
+      TweenLite.set(this.images[i],{
+        transform: 'translateX('+this.translateX/this.images[i].random+'px) translateY('+this.translateY/this.images[i].random+'px)'
+      })
+      }
+    
+
   }
   onDeviceOrientation(e) {
     this.moveFlowers(e.gamma,e.beta);

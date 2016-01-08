@@ -11,7 +11,6 @@ let isTouch = ("ontouchstart" in document.documentElement) ? true : false;
 
 let hotspot = document.querySelector('#hotspot');
 
-let gammaRotation = 0;
 
 export default class Webgl {
   constructor(width, height) {
@@ -31,7 +30,10 @@ export default class Webgl {
 
     this.camera = new THREE.PerspectiveCamera(45, width / height, 0.001, 1000);
 
-    this.camera.position.set(0,0,1);
+    this.camera.position.set(0,0,0);
+    // this.camera.zoom = .5;
+    this.camera.updateProjectionMatrix();
+    // this.camera.fov= 45;
 
     this.renderer = new THREE.WebGLRenderer();
     this.renderer.setSize(width, height);
@@ -56,18 +58,14 @@ export default class Webgl {
     this.cylinder = new Cylinder();
     this.cylinder.add(this.scene);
 
-    window.addEventListener('deviceorientation', function(e) {
-      gammaRotation = e.gamma ? e.gamma * (Math.PI / 360) : 0;
-    });
+
 
     window.webgl = this;
 
-    //if(isTouch)
-      //this.controls = new DeviceOrientationControls( this.camera );
+
+      // this.controls = new DeviceOrientationControls( this.camera );
     //else
       this.controls = new OrbitControls(this.camera, this.renderer.domElement);
-      //
-      //
       this.controls.minPolarAngle = Math.PI/180*90;
       this.controls.maxPolarAngle = Math.PI/180*90;
       this.controls.minDistance =150;
@@ -208,7 +206,6 @@ export default class Webgl {
     }
 
     this.cylinder.update();
-    //this.cylinder.cylinderMesh.rotation.y = gammaRotation;
     this.controls.update();
   }
 }
