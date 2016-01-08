@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="daT-HD-6xh">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -50,7 +51,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="y2f-Lv-Gd2"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RYI-uP-mLJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5A8-PS-FK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -111,7 +112,7 @@ Voila une belle récolte !</string>
                                 <state key="normal" title="Button" image="validey.png"/>
                                 <connections>
                                     <action selector="validey:" destination="p2j-9J-yXc" eventType="touchUpInside" id="59S-jd-2H4"/>
-                                    <segue destination="Y6H-z9-6ov" kind="push" id="LcL-OA-ktE"/>
+                                    <segue destination="Y6H-z9-6ov" kind="push" identifier="jardin" id="LcL-OA-ktE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -147,7 +148,7 @@ Voila une belle récolte !</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="irg-Ia-N4d">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="irg-Ia-N4d">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="549"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="VFA-tq-7u9">

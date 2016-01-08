@@ -23,6 +23,7 @@
 
 @property (nonatomic, strong) UIImageView *productImg;
 @property (nonatomic, strong) UIImageView *productReco;
+@property (nonatomic, strong) UIImageView *twitterImg;
 
 @end
 
@@ -174,14 +175,14 @@
 }
 - (IBAction)onTouchUpInsideStore:(id)sender {
     //store
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.daledietrich.com"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.sisley-paris.com/fr-FR/le-soin/soin-visage/soins-sisleya-global-anti-age.html"]];
 }
 - (IBAction)onTouchUpinsideShare:(id)sender {
     
-
+    self.twitterImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"01_sisleya_twitter"]];
     SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-    [tweetSheet setInitialText:@"Great fun to learn iOS programming at appcoda.com!"];
-    [tweetSheet addImage:self.productReco.image];
+    [tweetSheet setInitialText:@"J'ai récolté dans le jardin #SISLEY, la lavande, la réglisse et le tournesol. Mon produit du jour est SISLEŸA ! #MORI"];
+    [tweetSheet addImage:self.twitterImg.image];
     [self presentViewController:tweetSheet animated:YES completion:nil];
     
 
