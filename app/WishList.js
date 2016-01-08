@@ -13,7 +13,7 @@ class WishList {
         slice.classList.add('add'+this.products.length);
     }.bind(this), 800);
 
-    if(this.products.length>=4) {
+    if(this.products.length>=1) {
       slice.classList.add('animate-full');
       full.classList.add('animate-full');
       this.sendIosEvent();

@@ -92,13 +92,17 @@ export default class Webgl {
     this.intro = document.querySelector('.intro');
     this.tuto = document.querySelector('.tuto');
 
+    this.textSecond = document.querySelector('._intro.text.second');
+    this.textFirst = document.querySelector('._intro.text.first');
+
     var index = 0;
     var self = this;
 
     this.nextIntro.onclick =()=> {
       this.nextIntro.classList.add('animate');
 
-      this.wrapperText.innerHTML = "Votre découverte à travers l’univers phytotérpique, vous invite à collecter les plantes qui vous intéressent. Prenez en un des boutures et plantez les dans votre serre. Vos recolte vous ressemble, nous sommes à l’ecoute de vos recherches et vous proposerons un produit.";
+      this.textSecond.classList.add('show');
+      this.textFirst.classList.add('hide');
 
       index +=1;
       if (index  == 2 ) {
@@ -192,7 +196,12 @@ export default class Webgl {
       this.rendererCss.render( this.sceneCss, this.camera );
 
       for (var i = 0; i < this.hotspots.length; i++) {
+
           this.hotspots[i].check();
+
+            // this.hotspots[i].objectCss.position.x = 160 * Math.cos(this.hotspotsPosition.angle);
+            // this.hotspots[i].objectCss.position.y = this.hotspotsPosition.y;
+            // this.hotspots[i].objectCss.position.z = 160 * Math.sin(this.hotspotsPosition.angle);
           this.hotspots[i].objectCss.lookAt( this.camera.position );
           this.hotspots[i].objectCss2.lookAt( this.camera.position );
       }
