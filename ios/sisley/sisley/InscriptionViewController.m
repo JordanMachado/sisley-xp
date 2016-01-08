@@ -24,6 +24,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)validey:(id)sender {
+    [self performSegueWithIdentifier:@"jardin" sender:self];
 }
 - (IBAction)back:(id)sender {
         [self.navigationController popViewControllerAnimated:YES];

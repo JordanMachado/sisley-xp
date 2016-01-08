@@ -40,7 +40,7 @@
 - (void) start_Web_View {
     self.webview = [[UIWebView alloc] initWithFrame:CGRectMake(0,0,self.view.bounds.size.width,self.view.bounds.size.height)];
     self.webview.delegate = self;
-    NSURL *url = [NSURL URLWithString:@"http://stackoverflow.com/questions/7418815/background-loading-a-url-in-a-uiwebview"];
+    NSURL *url = [NSURL URLWithString:@"http://robindelaporte.fr/lab/sisley/"];
     [self.webview loadRequest:[NSURLRequest requestWithURL:url]];
     
     // go do something else to amuse the user while the web site loads...
@@ -57,16 +57,16 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSString *URLString = [[request URL] absoluteString];
        // [self performSegueWithIdentifier:@"jardin" sender:self];
-            [self performSegueWithIdentifier:@"inscription" sender:self];
-    if ([URLString isEqualToString:@"http://www.example.com/step3.htm"]) {
-        // The user reached step 3!
+
+    if ([URLString isEqualToString:@"http://robindelaporte.fr/lab/sisley/#recoltecomplete"]) {
+        [self performSegueWithIdentifier:@"inscription" sender:self];
     }
     return YES;
 }
 
 -(void)configureVideo{
     NSBundle *bundle = [NSBundle mainBundle];
-    NSString *moviePath = [bundle pathForResource:@"movie_1" ofType:@"mp4"];
+    NSString *moviePath = [bundle pathForResource:@"mori" ofType:@"mp4"];
     NSURL *movieURL = [NSURL fileURLWithPath:moviePath] ;
     
     self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];

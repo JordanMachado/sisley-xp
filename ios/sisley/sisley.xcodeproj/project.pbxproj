@@ -62,6 +62,7 @@
 		49F5511E1C3EE43E00C45B78 /* InscriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F5511D1C3EE43E00C45B78 /* InscriptionViewController.m */; };
 		49F551211C3EE4D400C45B78 /* bg-inscription.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49F551201C3EE4D400C45B78 /* bg-inscription.jpg */; };
 		49F551231C3EE98400C45B78 /* validey.png in Resources */ = {isa = PBXBuildFile; fileRef = 49F551221C3EE98400C45B78 /* validey.png */; };
+		49FBC0821C3FC54300FC6696 /* mori.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 49FBC0811C3FC54300FC6696 /* mori.mp4 */; settings = {ASSET_TAGS = (); }; };
 		75C0CFFF34842DE7A8ED546C /* libPods-sisley.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D9A9E888FF3A87E602A44F /* libPods-sisley.a */; };
 /* End PBXBuildFile section */
 
@@ -155,6 +156,8 @@
 		49F5511D1C3EE43E00C45B78 /* InscriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InscriptionViewController.m; sourceTree = "<group>"; };
 		49F551201C3EE4D400C45B78 /* bg-inscription.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "bg-inscription.jpg"; path = "assets/bg-inscription.jpg"; sourceTree = SOURCE_ROOT; };
 		49F551221C3EE98400C45B78 /* validey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = validey.png; path = assets/validey.png; sourceTree = SOURCE_ROOT; };
+		49FBC0801C3FC4A700FC6696 /* mori.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = mori.mp4; path = ../../../../../../Downloads/mori.mp4; sourceTree = "<group>"; };
+		49FBC0811C3FC54300FC6696 /* mori.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = mori.mp4; path = ../../../../../../Downloads/mori.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,10 +300,12 @@
 			children = (
 				49F551141C3ECE5000C45B78 /* movie.mov */,
 				49F5511A1C3ED67900C45B78 /* Mori_Splsh 2 (0-00-00-00).jpg */,
+				49FBC0811C3FC54300FC6696 /* mori.mp4 */,
 				49F551201C3EE4D400C45B78 /* bg-inscription.jpg */,
 				49F5510D1C3EC70400C45B78 /* test.mov */,
 				49F5510F1C3ECB4D00C45B78 /* test2.mp4 */,
 				49F551161C3ECFA100C45B78 /* movie_1.mp4 */,
+				49FBC0801C3FC4A700FC6696 /* mori.mp4 */,
 				49F551221C3EE98400C45B78 /* validey.png */,
 				49F551181C3ED61000C45B78 /* Mori_Splsh_Bg.jpg */,
 				49F551101C3ECBAC00C45B78 /* test2_2.mov */,
@@ -506,6 +511,7 @@
 				491A87681C3D5800002ECF5B /* product-name.png in Resources */,
 				491A87641C3D5800002ECF5B /* jardin_background.jpg in Resources */,
 				491A87441C3D24ED002ECF5B /* recolte.jpg in Resources */,
+				49FBC0821C3FC54300FC6696 /* mori.mp4 in Resources */,
 				491A87491C3D330F002ECF5B /* recolte-white-overlay.png in Resources */,
 				49F5511B1C3ED67900C45B78 /* Mori_Splsh 2 (0-00-00-00).jpg in Resources */,
 				49F5510E1C3EC70400C45B78 /* test.mov in Resources */,
@@ -743,7 +749,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2150A5CDC201E865A123E191 /* Pods-sisley.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = sisley/Info.plist;
@@ -758,7 +764,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 21DE5D3E704D4D036EF7D2DD /* Pods-sisley.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = sisley/Info.plist;
