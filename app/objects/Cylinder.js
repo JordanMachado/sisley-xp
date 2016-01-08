@@ -32,7 +32,7 @@ export default class Cylinder  {
   	// build the skybox Mesh
   	this.cylinderMesh	= new THREE.Mesh(
       //new THREE.CubeGeometry( 100, 100, 100,  1, 1, 1, null, true ),
-      new THREE.CylinderGeometry( 150, 150, 250, 60 ),
+      new THREE.CylinderGeometry( 250, 250, 350, 60 ),
       materialTest );
 
       this.cylinderMesh.position.set(0,0,0)

@@ -11,9 +11,9 @@ export default class Hotspot {
     element.style.height = "10px";
 
     this.objectCss = new THREE.CSS3DObject(element);
-		this.objectCss.position.x = 160 * Math.cos(datas.position.angle);
+		this.objectCss.position.x = 300 * Math.cos(datas.position.angle);
 		this.objectCss.position.y = datas.position.y;
-		this.objectCss.position.z = 160 * Math.sin(datas.position.angle);
+		this.objectCss.position.z = 300 * Math.sin(datas.position.angle);
     this.objectCss.element.parent = this.objectCss;
 
 
@@ -24,9 +24,9 @@ export default class Hotspot {
     element2.id = datas.id;
 
     this.objectCss2 = new THREE.CSS3DObject(element2);
-    this.objectCss2.position.x = 160 * Math.cos(datas.position.angle);
+    this.objectCss2.position.x = 300 * Math.cos(datas.position.angle);
 		this.objectCss2.position.y = datas.position.y + 45;
-		this.objectCss2.position.z = 160 * Math.sin(datas.position.angle);
+		this.objectCss2.position.z = 300 * Math.sin(datas.position.angle);
     this.objectCss2.element.parent = this.objectCss2;
 
     this.objectCss.element.onclick = function() {

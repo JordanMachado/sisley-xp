@@ -20,7 +20,13 @@ class WishList {
     }
   }
   sendIosEvent() {
-    console.log('---->ios');
+
+
+    let button = document.querySelector('.main-button');
+    button.onclick = function() {
+      console.log('---->ios');
+      window.location = "#recoltecomplete"
+    }
   }
 }
 
