@@ -17,7 +17,7 @@ body, html {
   z-index: 4; }
   .intro .wrapper {
     width: 80vw;
-    margin: 150px auto 0; }
+    margin: 180px auto 0; }
   .intro .title {
     font-family: 'National Semibold';
     color: white;
@@ -27,7 +27,18 @@ body, html {
     color: #767676;
     font-family: 'PlayfairDisplay Italic';
     font-size: 15px;
-    margin: 50px 0px; }
+    margin: 10px 0px 50px; }
+    .intro .text.first.hide {
+      opacity: 0;
+      transition: all 1s; }
+    .intro .text.second {
+      position: absolute;
+      top: 224px;
+      opacity: 0; }
+      .intro .text.second.show {
+        opacity: 1;
+        transition: all 1s;
+        transition-delay: 0.6s; }
   .intro .next {
     font-family: 'National Regular';
     color: #ed6f6c;
@@ -88,22 +99,26 @@ body, html {
       animation: animSlide 2s steps(48) infinite;
       transform: scale(0.5);
       padding: 70px;
-      margin-bottom: -210px;
-      margin-top: 60px; }
+      margin-bottom: -199px;
+      margin-top: 70px; }
     .tuto .picto.one {
       width: 80px;
       background: url("../assets/picto/glossaire.png");
       background-size: 3552px;
       background-repeat: no-repeat;
       background-position: 0px 0px;
-      animation: animslide2 2s steps(48) infinite; }
+      animation: animslide2 2s steps(48) infinite;
+      margin-top: 150px;
+      margin-bottom: -170px; }
     .tuto .picto.two {
       width: 60px;
       background: url("../assets/picto/house.png");
       background-size: 7749px;
       background-repeat: no-repeat;
       background-position: 0px 0px;
-      animation: animslide3 2s steps(126) infinite; }
+      animation: animslide3 2s steps(126) infinite;
+      margin-top: 200px;
+      margin-bottom: -190px; }
     .tuto .picto.three {
       width: 80px;
       background: url("../assets/picto/information.png");
@@ -309,8 +324,7 @@ body, html {
     color: white; }
 
 .pie.animate-full {
-  animation: pie-anim 2s ease forwards;
-  animation-delay: 1s; }
+  animation: pie-anim 2s cubic-bezier(0.7, 0.01, 0.25, 1.01) forwards; }
 
 .full {
   z-index: 1;
@@ -331,7 +345,8 @@ body, html {
   animation: background-anim 2s ease forwards;
   animation-delay: 1s; }
   .full.animate-full h2, .full.animate-full h3 {
-    animation: text-anim 2s ease forwards; }
+    animation: text-anim 1.6s cubic-bezier(0.7, 0.01, 0.25, 1.01) forwards;
+    animation-delay: 0.6s; }
 
 @keyframes background-anim {
   0% {
@@ -498,6 +513,14 @@ body, html {
     .text-hotspot.animated-text:after {
       animation: anim-hotspot-line 0.6s linear forwards;
       animation-delay: 0.2s; }
+  .text-hotspot#hotspot-tournesol {
+    margin-top: 15px; }
+    .text-hotspot#hotspot-tournesol:after {
+      margin-top: 10px; }
+  .text-hotspot#hotspot-reglisse {
+    margin-top: 10px; }
+    .text-hotspot#hotspot-reglisse:after {
+      margin-top: 7px; }
 
 @keyframes anim-hotspot-text {
   0% {

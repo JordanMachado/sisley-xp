@@ -3,8 +3,8 @@
     {
       "id":"hotspot-capucine",
       "position":{
-        "angle":308,
-        "y":-22,
+        "angle":357.4,
+        "y":21,
       },
       "product":{
         "id":"hotspot-capucine",
@@ -51,8 +51,8 @@
     {
       "id":"hotspot-lavande",
       "position":{
-        "angle":51,
-        "y":0,
+        "angle":50.8,
+        "y": -20,
       },
       "product":{
         "id":"hotspot-lavande",
