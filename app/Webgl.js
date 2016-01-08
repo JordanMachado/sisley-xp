@@ -11,6 +11,8 @@ let isTouch = ("ontouchstart" in document.documentElement) ? true : false;
 
 let hotspot = document.querySelector('#hotspot');
 
+let gammaRotation = 0;
+
 export default class Webgl {
   constructor(width, height) {
     this.params = {
@@ -54,13 +56,18 @@ export default class Webgl {
     this.cylinder = new Cylinder();
     this.cylinder.add(this.scene);
 
+    window.addEventListener('deviceorientation', function(e) {
+      gammaRotation = e.gamma ? e.gamma * (Math.PI / 360) : 0;
+    });
+
     window.webgl = this;
 
-    // if(isTouch)
-    //   this.controls = new DeviceOrientationControls( this.camera );
-    // else
-    
+    //if(isTouch)
+      //this.controls = new DeviceOrientationControls( this.camera );
+    //else
       this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+      //
+      //
       this.controls.minPolarAngle = Math.PI/180*90;
       this.controls.maxPolarAngle = Math.PI/180*90;
       this.controls.minDistance =150;
@@ -80,23 +87,29 @@ export default class Webgl {
   }
 
   initIntro(){
-    this.next = document.querySelector('.intro .next');
-    this.wrapper = document.querySelector('.intro .text');
-    this.tuto = document.querySelector('.intro');
+    this.nextIntro = document.querySelector('._intro.next');
+    this.wrapperText = document.querySelector('._intro.text');
+    this.intro = document.querySelector('.intro');
+    this.tuto = document.querySelector('.tuto');
+
     var index = 0;
     var self = this;
 
-    this.next.onclick =()=> {
-      this.wrapper.innerHTML = "Votre découverte à travers l’univers phytotérpique, vous invite à collecter les plantes qui vous intéressent. Prenez en un des boutures et plantez les dans votre serre. Vos recolte vous ressemble, nous sommes à l’ecoute de vos recherches et vous proposerons un produit.";
+    this.nextIntro.onclick =()=> {
+      this.nextIntro.classList.add('animate');
 
-      if (index <= 300) {
-        // TweenLite.to(this.wrapper, 0.6,{
-        //   marginLeft: -index+'vw',
-        //   delay: 1,
-        //   onComplete: function(){
-        //     self.next.classList.remove('animate');
-        //   }
-        // })
+      this.wrapperText.innerHTML = "Votre découverte à travers l’univers phytotérpique, vous invite à collecter les plantes qui vous intéressent. Prenez en un des boutures et plantez les dans votre serre. Vos recolte vous ressemble, nous sommes à l’ecoute de vos recherches et vous proposerons un produit.";
+
+      index +=1;
+      if (index  == 2 ) {
+        TweenLite.to(this.intro, 0.4,{
+          marginLeft: '-100vw',
+          delay: 1
+        })
+        TweenLite.to(this.tuto, 0.4,{
+          marginLeft: '-100vw',
+          delay: 1
+        })
       }
     }
   }
@@ -184,7 +197,9 @@ export default class Webgl {
           this.hotspots[i].objectCss2.lookAt( this.camera.position );
       }
     }
+
     this.cylinder.update();
+    //this.cylinder.cylinderMesh.rotation.y = gammaRotation;
     this.controls.update();
   }
 }

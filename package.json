@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "budo app/index.js:build/main.js --dir ./public --live --open -- -t stringify -t babelify -g glslify | node-sass -w app/styles/main.scss -o public/build/",
-    "build": "browserify -t babelify -t stripify -g glslify app/index.js | uglifyjs -o public/build/main.js"
+    "build": "browserify -t stringify -t babelify -g glslify app/index.js | uglifyjs -o public/build/main.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
   "dependencies": {
     "dat-gui": "*",
     "gsap": "*",
-    "mustache": "^2.2.0",
+    "mustache": "^2.2.1",
     "raf": "*",
     "three": "^0.73.0",
     "three-orbit-controls": "*",
@@ -30,9 +30,10 @@
     "browserify": "*",
     "budo": "*",
     "glslify": "*",
+    "jstify": "^0.13.0",
+    "node-sass": "*",
     "stringify": "^3.1.0",
     "stripify": "*",
-    "uglifyjs": "*",
-    "node-sass": "*"
+    "uglifyjs": "*"
   }
 }
